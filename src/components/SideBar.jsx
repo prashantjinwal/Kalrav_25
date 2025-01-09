@@ -26,17 +26,18 @@ export default function SideBar({ hide }) {
     ];
 
     return (
-        <div className="sidebar-container px-5 py-8 font-protest h-[100vh] bg-[#D9D9D9] w-full opacity-70 flex flex-col justify-between">
+        <div className="sidebar-container px-5 py-8 font-protest h-[100vh]  relative w-full  flex flex-col justify-between">
+            <div className='bg-[#D9D9D9] opacity-40 absolute top-0 left-0 w-full h-full -z-10'> </div>
             <div className="sidebar-top">
                 <button className="close-btn" onClick={hide}>
                     <img src="src/assets/images/sidebar/katana.png" alt="Close" className="h-6 w-auto" />
                 </button>
             </div>
             <nav className="sidebar-center">
-                <ul className="flex flex-col gap-5">
+                <ul className="flex flex-col gap-8">
                     {navigationItems.map((item) => (
-                        <li key={item.name} className=''>
-                            <Link to={item.link} className="block text-3xl font-medium text-center font-protest p-2  rounded-md ">
+                        <li key={item.name} className='bg-[url("src/assets/images/sidebar/linkBg.png")] bg-contain bg-no-repeat bg-center  '>
+                            <Link to={item.link} className="block text-3xl font-medium text-center font-protest p-2 text-white rounded-md ">
                                 {item.name}
                             </Link>
                         </li>
