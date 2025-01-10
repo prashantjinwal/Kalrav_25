@@ -36,9 +36,8 @@ export default function SideBar({ hide }) {
             <nav className="sidebar-center">
                 <ul className="flex flex-col gap-8">
                     {navigationItems.map((item, index) => (
-                        // <li key={item.name} className="relative">
+
                         <li key={item.name} className='bg-[url("/images/sidebar/linkBg.png")] bg-contain bg-w bg-no-repeat bg-center relative'>
-                            {/* <img src={`${index % 2 === 0 ? '/images/sidebar/linkBg.png' : '/images/sidebar/linkBg2.png'}`} className='absolute top-0 left-0 w-full ' /> */}
                             <Link onClick={hide} to={item.link} className="block text-3xl font-medium text-center font-protest p-2 text-white rounded-md  relative">
                                 {item.name}
                             </Link>
