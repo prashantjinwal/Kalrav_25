@@ -1,9 +1,82 @@
 import React from 'react'
 
 export default function Home() {
+
+    // card component 
+    const HomeCard = ({ title, content, content_bg_image, img_op }) => {
+        return (
+            <div className="w-full h-full bg-[url('/images/home/cardBg.png')] bg-no-repeat bg-cover bg-center p-6 rounded-3xl relative">
+                <img src={content_bg_image} alt="..." className={`absolute top-1/2 -translate-y-[40%] left-1/2 -translate-x-1/2 h-auto w-[80%]  object-contain`} style={{ opacity: img_op / 100 }} />
+                <div className="p-4 corner-dots">
+                    <h1 className='text-center title font-protest text-[2.9rem] mb-2 font-medium'>{title}</h1>
+                    <div className="content w-full">
+                        <p className='text-left text-sm font-noto text-wrap pb-5'>{content}</p>
+                    </div>
+                    <span></span>
+                </div>
+            </div>)
+    }
+
+
+    const card_contents = [
+        {
+            title: 'Theme',
+            content: "Prepare to ascend Mount Olympus, mortals! KALRAV throws open its gates to a realm of gods, heroes, and myths whispered through time.Immerse yourselves in the vibrant tapestries of Greek lore, where mortals defied destiny and deities wielded Olympian power.Challenge your wit with riddles from the Sphinx, test your might in Herculean trials, and dance under the celestial gaze of starry constellations.From the cunning schemes of Athena to the daring exploits of Odysseus, let your inner legend rise! This KALRAV, Olympus trembles before the revelry below – join us and etch your name in the annals of myth! But, remember mortals, 'OLYMPUS HAS NOTHING ON US",
+            bgImg: '/images/samurai/2.png',
+            img_op: 80
+        },
+        {
+            title: 'About',
+            content: "The revival of Kalrav, the annual extravaganza organized by Deen Dayal Upadhyaya, brings with it an electrifying anticipation! With over 20,000 students from 100+ colleges nationwide eagerly awaiting its return, Kalrav holds immense significance.\nThis year's Kalrav pledges an unforgettable experience, showcasing a myriad of delights – from tantalizing cuisine to vibrant music and playful activities. The lineup promises an even grander musical spectacle, building upon the legacy of past performances featuring icons like Honey Singh, Jubin Nautiyal, and Guru Randhawa.\nYet, Kalrav transcends mere entertainment; it serves as a beacon of cultural unity, drawing attendees from diverse backgrounds into a shared celebration of artistic expression. With renowned artists, musicians, and performers gracing the stage, the campus is set to transform into a captivating mosaic of creativity and camaraderie.\nSo, mark your calendars and immerse yourself in the enchantment of Kalrav – an experience sure to resonate long after the final note fades. ",
+            bgImg: '/images/samurai/3.png',
+            img_op: 40
+        }
+    ]
+
+
+    const text_list = ['祭典カルラヴの復活は興奮の期待', '毎年恒例の祭典で新たな冒険が始まる', '伝統と革新が織りなす壮大な物語', '未来への扉を開く祝祭の夜明け'];
+
+
     return (
-        <div className="" >
-            Home
-        </div >
+        <div className="home-page-container" >
+
+            <div className="py-4 relative mt-20 page-top ">
+                <div className="absolute top-0 left-0 w-full  flex flex-col gap-[30px] z-0">
+                    {text_list.map((text, index) => (
+                        <div
+                            key={index}
+                            className="text-center text-white text-3xl py-1 w-full overflow-hidden bg-black bg-opacity-40 whitespace-nowrap font-noto text-opacity-80"
+                            lang="ja"
+                            translate="no"
+                        >
+                            {text}
+                        </div>
+                    ))}
+                </div>
+
+                <img
+                    src="/images/samurai/1.png"
+                    alt="..."
+                    className="block object-cover h-auto w-[70vw] max-w-[400px] mx-auto relative z-10 -mt-16"
+                />
+            </div>
+
+
+            {/* cards */}
+            <div className="p-8 sm:mt-10  flex flex-col gap-6">
+                {
+                    card_contents.map((card, index) => (
+                        <>
+
+                            <HomeCard key={index} title={card.title} content={card.content} content_bg_image={card.bgImg} img_op={card.img_op} />
+                            <div className="px-4 py-2 flex justify-center">
+                                <img src="/images/divider.png" alt="" />
+                            </div>
+                        </>
+                    ))
+                }
+
+            </div>
+        </div>
     )
 }
