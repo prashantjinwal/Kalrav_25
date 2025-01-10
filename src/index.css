@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .corner-dots {
+        @apply relative;
+    }
+
+    .corner-dots::before,
+    .corner-dots::after,
+    .corner-dots span::before,
+    .corner-dots span::after {
+        @apply absolute w-2 h-2 bg-black rounded-full;
+        content: "";
+    }
+
+    .corner-dots::before {
+        top: 0;
+        left: 0;
+    }
+
+    .corner-dots::after {
+        top: 0;
+        right: 0;
+    }
+
+    .corner-dots span::before {
+        bottom: 0;
+        left: 0;
+    }
+
+    .corner-dots span::after {
+        bottom: 0;
+        right: 0;
+    }
+}

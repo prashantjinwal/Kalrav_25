@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         'protest': ['"Protest Revolution"', 'cursive'],
+        'noto': ['"Noto Sans"', 'sans-serif'],
       },
     },
   },
