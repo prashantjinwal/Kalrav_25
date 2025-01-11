@@ -5,8 +5,8 @@ export default function Home() {
     // card component 
     const HomeCard = ({ title, content, content_bg_image, img_op }) => {
         return (
-            <div className="w-full h-full bg-[url('/images/home/cardBg.png')] bg-no-repeat bg-cover bg-center p-6 rounded-3xl relative">
-                <img src={content_bg_image} alt="..." className={`absolute top-1/2 -translate-y-[40%] left-1/2 -translate-x-1/2 h-auto w-[80%]  object-contain`} style={{ opacity: img_op / 100 }} />
+            <div className="card w-full h-full lg: bg-[url('/images/home/cardBg.png')] bg-no-repeat bg-cover bg-center p-4 rounded-3xl relative">
+                <img src={content_bg_image} alt="..." className={`absolute top-0  left-1/2 -translate-x-1/2 h-full w-auto  object-contain`} style={{ opacity: img_op / 100 }} />
                 <div className="p-4 corner-dots">
                     <h1 className='text-center title font-protest text-[2.9rem] mb-2 font-medium'>{title}</h1>
                     <div className="content w-full">
@@ -20,14 +20,14 @@ export default function Home() {
 
     const card_contents = [
         {
-            title: 'Theme',
+            title: 'THEME',
             content: "Prepare to ascend Mount Olympus, mortals! KALRAV throws open its gates to a realm of gods, heroes, and myths whispered through time.Immerse yourselves in the vibrant tapestries of Greek lore, where mortals defied destiny and deities wielded Olympian power.Challenge your wit with riddles from the Sphinx, test your might in Herculean trials, and dance under the celestial gaze of starry constellations.From the cunning schemes of Athena to the daring exploits of Odysseus, let your inner legend rise! This KALRAV, Olympus trembles before the revelry below – join us and etch your name in the annals of myth! But, remember mortals, 'OLYMPUS HAS NOTHING ON US",
             bgImg: '/images/samurai/2.png',
             img_op: 80
         },
         {
-            title: 'About',
-            content: "The revival of Kalrav, the annual extravaganza organized by Deen Dayal Upadhyaya, brings with it an electrifying anticipation! With over 20,000 students from 100+ colleges nationwide eagerly awaiting its return, Kalrav holds immense significance.\nThis year's Kalrav pledges an unforgettable experience, showcasing a myriad of delights – from tantalizing cuisine to vibrant music and playful activities. The lineup promises an even grander musical spectacle, building upon the legacy of past performances featuring icons like Honey Singh, Jubin Nautiyal, and Guru Randhawa.\nYet, Kalrav transcends mere entertainment; it serves as a beacon of cultural unity, drawing attendees from diverse backgrounds into a shared celebration of artistic expression. With renowned artists, musicians, and performers gracing the stage, the campus is set to transform into a captivating mosaic of creativity and camaraderie.\nSo, mark your calendars and immerse yourself in the enchantment of Kalrav – an experience sure to resonate long after the final note fades. ",
+            title: 'ABOUT',
+            content: `The revival of Kalrav, the annual extravaganza organized by Deen Dayal Upadhyaya, brings with it an electrifying anticipation! With over 20,000 students from 100+ colleges nationwide eagerly awaiting its return, Kalrav holds immense significance.\nThis year's Kalrav pledges an unforgettable experience, showcasing a myriad of delights – from tantalizing cuisine to vibrant music and playful activities. The lineup promises an even grander musical spectacle, building upon the legacy of past performances featuring icons like Honey Singh, Jubin Nautiyal, and Guru Randhawa.\nYet, Kalrav transcends mere entertainment; it serves as a beacon of cultural unity, drawing attendees from diverse backgrounds into a shared celebration of artistic expression. With renowned artists, musicians, and performers gracing the stage, the campus is set to transform into a captivating mosaic of creativity and camaraderie.\nSo, mark your calendars and immerse yourself in the enchantment of Kalrav – an experience sure to resonate long after the final note fades. `,
             bgImg: '/images/samurai/3.png',
             img_op: 40
         }
@@ -63,19 +63,23 @@ export default function Home() {
 
 
             {/* cards */}
-            <div className="p-8 sm:mt-10  flex flex-col gap-6">
+            <div className="p-8 sm:mt-10  flex flex-col gap-6 mx-auto ">
                 {
                     card_contents.map((card, index) => (
-                        <>
-
+                        <div key={index}>
                             <HomeCard key={index} title={card.title} content={card.content} content_bg_image={card.bgImg} img_op={card.img_op} />
-                            <div className="px-4 py-2 flex justify-center">
+                            <div className="px-4 pt-6 flex justify-center">
                                 <img src="/images/divider.png" alt="" />
                             </div>
-                        </>
+                        </div>
                     ))
                 }
+            </div>
 
+
+            {/* FAQ */}
+            <div className="px-5 py-8 ">
+                <h1 className="heading text-4xl font-semibold font-protest text-center text-white p-2 rounded-lg">FAQ</h1>
             </div>
         </div>
     )
