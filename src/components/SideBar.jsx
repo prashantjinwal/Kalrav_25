@@ -26,11 +26,11 @@ export default function SideBar({ hide }) {
     ];
 
     return (
-        <div className="sidebar-container px-5 py-8 font-protest h-[100vh]  relative w-full  flex flex-col justify-between">
-            <div className='bg-[#D9D9D9] opacity-60 absolute top-0 left-0 w-full h-full -z-10'> </div>
+        <div className="sidebar-container p-6 font-protest h-[100vh]  relative w-full  flex flex-col justify-between">
+            <div className='bg-[#D9D9D9] opacity-70 absolute top-0 left-0 w-full h-full -z-10'> </div>
             <div className="sidebar-top">
                 <button className="close-btn" onClick={hide}>
-                    <img src="/images/sidebar/Katana.png" alt="Close" className="h-6 w-auto object-cover" />
+                    <img src="/images/sidebar/Katana.png" alt="Close" className="h-[30px] w-auto object-cover" />
                 </button>
             </div>
             <nav className="sidebar-center">
@@ -46,15 +46,16 @@ export default function SideBar({ hide }) {
                 </ul>
             </nav>
 
-            <div className="sidebar-bottom mx-auto flex flex-col items-center w-fit relative">
+            {/* Logo */}
+            <div className="sidebar-bottom mx-auto flex flex-col items-center w-fit relative m">
                 <span>
                     <img src="/images/sidebar/karlravLogo.png" alt='logo' className="h-9 w-auto" />
                 </span>
-                <span className='transform -translate-x-2 -translate-y-[5px]'>
+                <span className='transform -translate-x-2 -mt-[5px]'>
                     <img src="/images/sidebar/HrSword.png" alt="..." className='w-[154px] h-auto' />
                 </span>
                 <span>
-                    <p className="font-protest text-2xl font-medium transform -translate-y-5 translate-x-12  ">2025</p>
+                    <p className="font-protest text-2xl font-medium transform -mt-4 translate-x-12  ">2025</p>
                 </span>
             </div>
         </div >
