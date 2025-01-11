@@ -35,3 +35,12 @@
         right: 0;
     }
 }
+
+@font-face {
+    font-family: protest-guerrilla;
+    src: url("public/images/home/protest-guerrilla");
+}
+
+.protest-g{
+    font-family: "protest-guerrilla";
+}
