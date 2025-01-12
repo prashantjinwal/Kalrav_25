@@ -62,7 +62,7 @@ export default function Home() {
 
 
             {/* cards */}
-            <div className="p-8 sm:mt-10  flex flex-col gap-6 mx-auto noto ">
+            <div className="p-8 sm:mt-10  flex flex-col gap-6 mx-auto font-noto ">
                 {
                     card_contents.map((card, index) => (
                         <div key={index}>
