@@ -89,6 +89,7 @@ export default function Home() {
                 />
             </div>
 
+
             <div className="w-full sm:w-9/12 md:w-[65%] lg:w-1/2 mx-auto">
                 {/* cards */}
                 <div className="p-8 sm:mt-10  flex flex-col gap-6 mx-auto noto ">
@@ -99,6 +100,17 @@ export default function Home() {
                                 <div className="px-4 pt-6 flex justify-center">
                                     <img src="/images/divider.png" className="h-5 lg:h-10 w-auto" alt="" />
                                 </div>
+
+
+            {/* cards */}
+            <div className="p-8 sm:mt-10  flex flex-col gap-6 mx-auto font-noto ">
+                {
+                    card_contents.map((card, index) => (
+                        <div key={index}>
+                            <HomeCard key={index} title={card.title} content={card.content} content_bg_image={card.bgImg} img_op={card.img_op} />
+                            <div className="px-4 pt-6 flex justify-center">
+                                <img src="/images/divider.png" alt="" />
+
                             </div>
                         ))
                     }

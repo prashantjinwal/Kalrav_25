@@ -1,8 +1,18 @@
+
 import React, { useState, useEffect } from 'react';
 import SideBar from './SideBar';
 import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
+=======
+/* eslint-disable react/display-name */
+import  { useState, useEffect } from 'react'
+import SideBar from './SideBar';
+import { useNavigate } from 'react-router-dom';
+
+// eslint-disable-next-line react-refresh/only-export-components
+export default function () {
+
     const [showSidebar, setShowSidebar] = useState(false);
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -42,7 +52,25 @@ export default function Header() {
     }, [showSidebar]);
 
     return (
+
         <header>
+
+        <header className="header p-4">
+            {/* Header Background with Logo and Menu Button */}
+            <div className="bg-[url('/images/header/headerBg.png')] bg-cover bg-no-repeat flex items-center justify-between lg:justify-around">
+                {/* Logo Section */}
+                <div className="logo cursor-pointer" onClick={() => navigate('/')}>
+                    <img src="/images/header/logo.png" alt="Logo" className="h-9 w-auto" />
+                </div>
+
+                {/* Hamburger Menu Button */}
+                <button className="menu-btn" onClick={() => setShowSidebar(!showSidebar)}>
+                    <img src="/images/header/hamburger.png" alt="Menu" className="hamburger w-auto h-9" />
+                </button>
+            </div>
+
+            {/* Sidebar Section */}
+
             <div
                 className={`header p-4 fixed top-0 left-0 w-full  z-40 transform transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
                     }`}
