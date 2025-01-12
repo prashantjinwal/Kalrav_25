@@ -1,10 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import  { useState, useEffect } from 'react';
 import SideBar from './SideBar';
 import { useNavigate } from 'react-router-dom';
 
 
-// eslint-disable-next-line react-refresh/only-export-components
+ 
 export default function Header() {
 
     const [showSidebar, setShowSidebar] = useState(false);
