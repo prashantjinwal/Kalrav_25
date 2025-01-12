@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'protest': ['"Protest Revolution"', 'cursive'],
+        'protest': ['Protest Revolution', 'cursive'],
         'noto': ['"Noto Sans"', 'cursive'],
         'imonoid': ['Imonoid', 'monospace'],
         'protest-guerrilla': ['"Protest Guerrilla"', 'cursive'],
