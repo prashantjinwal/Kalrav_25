@@ -1,17 +1,11 @@
 
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import SideBar from './SideBar';
 import { useNavigate } from 'react-router-dom';
 
-export default function Header() {
-=======
-/* eslint-disable react/display-name */
-import  { useState, useEffect } from 'react'
-import SideBar from './SideBar';
-import { useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line react-refresh/only-export-components
-export default function () {
+export default function Header() {
 
     const [showSidebar, setShowSidebar] = useState(false);
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);
@@ -53,7 +47,7 @@ export default function () {
 
     return (
 
-        <header>
+       
 
         <header className="header p-4">
             {/* Header Background with Logo and Menu Button */}
