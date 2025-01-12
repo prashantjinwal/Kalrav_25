@@ -39,7 +39,7 @@ export default function SideBar({ hide }) {
             </div>
             <nav className="sidebar-center">
                 <ul className="flex flex-col gap-8">
-                    {navigationItems.map((item, index) => (
+                    {navigationItems.map((item) => (
                         <li key={item.name} className='bg-[url("/images/sidebar/linkBg.png")] bg-contain bg-w bg-no-repeat bg-center relative font-protest'>
                             <Link onClick={hide} to={item.link} className="block text-3xl font-medium text-center font-protest p-2 text-white rounded-md  relative">
                                 {item.name}
