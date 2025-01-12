@@ -28,7 +28,6 @@ export default function SideBar({ hide }) {
 
     return (
 
-        <div className="sidebar-container p-6  h-screen  relative w-full  flex flex-col justify-between">
 
         <div className="sidebar-container p-5 font-protest h-[100vh]  relative w-full  flex flex-col justify-between">
 
