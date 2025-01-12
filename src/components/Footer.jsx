@@ -25,7 +25,7 @@ export default function Footer() {
     ]
 
     return (
-        <footer className='px-5 pt-8 pb-2 relative bg-gradient-to-t from-black/40 to-[#700409]/90 shadow-xl  shadow-[#ffffff] z-20'>
+        <footer className='px-5 pt-8 pb-2 relative bg-gradient-to-t from-black/40 to-[#700409]/90   z-20'>
             <div className="flex items-start justify-between lg:justify-around">
                 <div className="address">
                     <h1 className='name text-2xl font-protest text-[#D3A84C]'>DDUC</h1>

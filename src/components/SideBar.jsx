@@ -27,18 +27,21 @@ export default function SideBar({ hide }) {
     ];
 
     return (
+
+        <div className="sidebar-container p-6  h-screen  relative w-full  flex flex-col justify-between">
+
         <div className="sidebar-container p-5 font-protest h-[100vh]  relative w-full  flex flex-col justify-between">
+
             <div className='bg-[#D9D9D9] opacity-70 absolute top-0 left-0 w-full h-full -z-10'> </div>
             <div className="sidebar-top">
                 <button className="close-btn" onClick={hide}>
-                    <img src="/images/sidebar/Katana.png" alt="Close" className="h-[30px] w-auto object-cover" />
+                    <img src="/images/sidebar/Katana.png" alt="Close" className="h-[1.9rem] h w-auto object-cover" />
                 </button>
             </div>
             <nav className="sidebar-center">
                 <ul className="flex flex-col gap-8">
                     {navigationItems.map((item, index) => (
-
-                        <li key={item.name} className='bg-[url("/images/sidebar/linkBg.png")] bg-contain bg-w bg-no-repeat bg-center relative'>
+                        <li key={item.name} className='bg-[url("/images/sidebar/linkBg.png")] bg-contain bg-w bg-no-repeat bg-center relative font-protest'>
                             <Link onClick={hide} to={item.link} className="block text-3xl font-medium text-center font-protest p-2 text-white rounded-md  relative">
                                 {item.name}
                             </Link>
@@ -48,7 +51,9 @@ export default function SideBar({ hide }) {
             </nav>
 
             {/* Logo */}
+
             <div className="sidebar-bottom mx-auto mb-10 flex flex-col items-center w-fit relative ">
+
                 <span>
                     <img src="/images/sidebar/karlravLogo.png" alt='logo' className="h-9 w-auto" />
                 </span>

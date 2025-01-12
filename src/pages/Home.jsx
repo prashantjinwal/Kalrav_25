@@ -1,4 +1,5 @@
-
+import { useState } from "react"
+import faq from "../data/faqData"
 export default function Home() {
 
     // card component 
@@ -15,6 +16,35 @@ export default function Home() {
                 </div>
             </div>)
     }
+
+
+    const FaqDropDown = ({ question, answer }) => {
+        const [isOpen, setIsOpen] = useState(false);
+
+        return (
+            <div className="mb-2">
+                <button
+                    className="flex items-center w-full text-left gap-5 px-4 py-2 rounded-md bg-gradient-to-r from-[#CBA247] via-[#987935] to-[#655123] hover:brightness-110 transition-all duration-300"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    <img
+                        src="/images/icons/shuriken.png"
+                        className={`w-8 h-auto transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                        alt="toggle"
+                    />
+                    <span className="font-medium font-protest">{question}</span>
+                </button>
+                <div
+                    className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                        }`}
+                >
+                    <div className="mt-2 bg-[#987935] rounded-lg px-4 py-3 shadow-lg font-noto">
+                        <p className="text-gray-100">{answer}</p>
+                    </div>
+                </div>
+            </div>)
+    }
+
 
 
     const card_contents = [
@@ -37,9 +67,8 @@ export default function Home() {
 
 
     return (
-        <div className="home-page-container" >
-
-            <div className="py-4 relative mt-20 page-top ">
+        <div className="home-page-container mt-[8rem]" >
+            <div className="py-4 relative  page-top ">
                 <div className="absolute top-0 left-0 w-full  flex flex-col gap-[30px] z-0">
                     {text_list.map((text, index) => (
                         <div
@@ -61,6 +90,18 @@ export default function Home() {
             </div>
 
 
+            <div className="w-full sm:w-9/12 md:w-[65%] lg:w-1/2 mx-auto">
+                {/* cards */}
+                <div className="p-8 sm:mt-10  flex flex-col gap-6 mx-auto noto ">
+                    {
+                        card_contents.map((card, index) => (
+                            <div key={index}>
+                                <HomeCard key={index} title={card.title} content={card.content} content_bg_image={card.bgImg} img_op={card.img_op} />
+                                <div className="px-4 pt-6 flex justify-center">
+                                    <img src="/images/divider.png" className="h-5 lg:h-10 w-auto" alt="" />
+                                </div>
+
+
             {/* cards */}
             <div className="p-8 sm:mt-10  flex flex-col gap-6 mx-auto font-noto ">
                 {
@@ -69,16 +110,22 @@ export default function Home() {
                             <HomeCard key={index} title={card.title} content={card.content} content_bg_image={card.bgImg} img_op={card.img_op} />
                             <div className="px-4 pt-6 flex justify-center">
                                 <img src="/images/divider.png" alt="" />
+
                             </div>
-                        </div>
-                    ))
-                }
-            </div>
+                        ))
+                    }
+                </div>
 
 
-            {/* FAQ */}
-            <div className="px-5 py-8 ">
-                <h1 className="heading text-4xl font-semibold font-protest text-center text-white p-2 rounded-lg">FAQ</h1>
+                {/* FAQ */}
+                <div className="px-5  pb-10 ">
+                    <h1 className="heading text-[2.9rem] font-medium font-protest text-center text-black p-2 rounded-lg">FAQ</h1>
+                    <div className="mt-5 faq-wrapper flex flex-col gap-4 py-5  bg-black rounded-lg">
+                        {faq.map((item) => (
+                            <FaqDropDown key={item.id} question={item.question} answer={item.answer} />
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     )
