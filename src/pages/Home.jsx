@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import faq from "../data/faqData";
+import faq from "../data/faqData.js";
 
 export default function Home() {
   // Card component
