@@ -51,19 +51,7 @@ export default function Header() {
        
 
         <header className="header p-4">
-            {/* Header Background with Logo and Menu Button */}
-            <div className="bg-[url('/images/header/headerBg.png')] bg-cover bg-no-repeat flex items-center justify-between lg:justify-around">
-                {/* Logo Section */}
-                <div className="logo cursor-pointer" onClick={() => navigate('/')}>
-                    <img src="/images/header/logo.png" alt="Logo" className="h-9 w-auto" />
-                </div>
-
-                {/* Hamburger Menu Button */}
-                <button className="menu-btn" onClick={() => setShowSidebar(!showSidebar)}>
-                    <img src="/images/header/hamburger.png" alt="Menu" className="hamburger w-auto h-9" />
-                </button>
-            </div>
-
+            
             {/* Sidebar Section */}
 
             <div
