@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import faq from "../data/faqData.js";
+import faq from "../../public/data/FaqData.js";
 
 export default function Home() {
   // Card component
@@ -130,6 +130,8 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        
       </div>
     </div>
   );
