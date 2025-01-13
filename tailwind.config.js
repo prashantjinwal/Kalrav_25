@@ -9,7 +9,7 @@ export default {
       fontFamily: {
 
         'protest': ['Protest Revolution', 'cursive'],
-        'noto': ['Noto Sans', 'cursive'],
+        'noto': ['Noto-Sans', 'cursive'],
         'imonoid': ['Imonoid', 'monospace'],
         'protest-guerrilla': ['"Protest Guerrilla"', 'cursive'],
       },
