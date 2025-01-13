@@ -11,7 +11,7 @@ export default {
         'protest': ['Protest Revolution', 'cursive'],
         'noto': ['Noto-Sans', 'cursive'],
         'imonoid': ['Imonoid', 'monospace'],
-        'protest-guerrilla': ['"Protest Guerrilla"', 'cursive'],
+        'protest-guerrilla': ['Protest Guerrilla', 'cursive'],
       },
     },
   },
