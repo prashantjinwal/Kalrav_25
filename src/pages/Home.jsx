@@ -40,9 +40,8 @@ export default function Home() {
           <span className="font-medium font-protest">{question}</span>
         </button>
         <div
-          className={`overflow-hidden transition-all duration-300 ${
-            isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="mt-2 bg-[#987935] rounded-lg px-4 py-3 shadow-lg font-noto">
             <p className="text-gray-100">{answer}</p>
@@ -89,7 +88,17 @@ export default function Home() {
               lang="ja"
               translate="no"
             >
-              {text}
+              <div className={`animate-scrolling inline-flex whitespace-nowrap  ${index % 2 === 0 ? 'animate-scroll-right' : 'animate-scroll-left'}`}>
+                {[...Array(6)].map((_, i) => (
+                  <span key={i}>{text}</span>
+                ))}
+              </div>
+              {/* <div className="inline-flex whitespace-nowrap  animate-infinite-scroll">
+                <span>{text}</span>
+                <span>{text}</span>
+                <span>{text}</span>
+                <span>{text}</span>
+              </div> */}
             </div>
           ))}
         </div>
@@ -131,7 +140,7 @@ export default function Home() {
           </div>
         </div>
 
-        
+
       </div>
     </div>
   );
