@@ -9,12 +9,12 @@ export default function Footer() {
         },
         {
             imgUrl: '/images/icons/linkedin.png',
-            link: 'https://www.linkedin.com/DDUC',
+            link: 'https://www.linkedin.com/in/kalrav-dduc-4642b32b5/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
             name: 'LinkedIn'
         },
         {
             imgUrl: '/images/icons/instagram.png',
-            link: 'https://www.instagram.com/DDUC',
+            link: 'https://www.instagram.com/kalrav_dduc/',
             name: 'Instagram'
         },
         {
@@ -25,7 +25,7 @@ export default function Footer() {
     ]
 
     return (
-        <footer className='px-5 pt-8 pb-2 relative bg-gradient-to-t from-black/40 to-[#700409]/90   z-20'>
+        <footer className='px-5 pt-8 pb-2 relative bg-gradient-to-t from-black/40 to-[#700409]/90  z-20'>
             <div className="flex items-start justify-between lg:justify-around">
                 <div className="address">
                     <h1 className='name text-2xl font-protest text-[#D3A84C]'>DDUC</h1>
