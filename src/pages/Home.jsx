@@ -6,14 +6,16 @@ export default function Home() {
   // Card component
   const Card = ({ title, content, content_bg_image, img_op }) => (
     <div className="card w-full h-full bg-[url('/images/home/cardBg.png')] bg-no-repeat bg-cover bg-center p-4 rounded-3xl relative">
+
       <img
         src={content_bg_image}
         alt="Card background"
         className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain"
         style={{ opacity: img_op / 100 }}
       />
+
       <div className="p-4 corner-dots">
-        <h1 className="text-center title font-protest text-[2.9rem] mb-2 font-medium">{title}</h1>
+        <h1 className="text-center title font-protest text-[2.9rem] mb-2 font-medium ">{title}</h1>
         <div className="content w-full">
           <p className="text-left text-sm font-noto pb-5">{content}</p>
         </div>
@@ -112,7 +114,7 @@ export default function Home() {
 
       <div className="w-full sm:w-9/12 md:w-[65%] lg:w-1/2 mx-auto">
         {/* Cards Section */}
-        <div className="p-8 sm:mt-10 flex flex-col gap-6 mx-auto font-noto">
+        <div className="p-8 sm:mt-10 flex flex-col gap-6 mx-auto font-noto ">
           {cardContents.map((card, index) => (
             <div key={index}>
               <Card
