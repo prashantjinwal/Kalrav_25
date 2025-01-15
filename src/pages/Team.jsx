@@ -6,7 +6,7 @@ import TeamComp from "../components/TeamComp"
 
 export default function Team() {
     return (
-      <div className="pt-24 py-10 flex flex-col bg-gradient-to-l from-amber-200 to-amber-500  justify-center items-center">
+      <div className="pt-24 py-10 flex flex-col bg-[url('/images/TeamBG.png')]  justify-center items-center">
       {/* Core Cultural Council */}
           <div className="bg-[url('/images/Group.png')] bg-cover w-[80%] lg:w-[50%] bg-no-repeat flex  justify-center lg:justify-around" >
               <h3 className="text-black font-semibold text-2xl font-protest py-4 justify-center  ">Core Cultural Council </h3>
