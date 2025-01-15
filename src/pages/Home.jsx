@@ -121,7 +121,7 @@ export default function Home() {
 
         {/* FAQ Section */}
         <div className="px-5 pb-10">
-          <h1 className="heading text-[2.9rem] font-medium font-protest text-center text-black p-2 rounded-lg">
+          <h1 className="heading text-[2.9rem] font-medium font-protest text-center text-black  p-2 rounded-lg">
             FAQ
           </h1>
           <div className="mt-5 faq-wrapper flex flex-col gap-4 py-5 bg-black rounded-lg">
