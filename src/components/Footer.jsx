@@ -24,7 +24,7 @@ export default function Footer() {
         },
         {
             imgUrl: '/images/icons/Email.png',
-            link: 'https://www.email.com/DDUC',
+            link: 'mailto:kalrav@ddu.du.ac.in"',
             name: 'Email'
         },
     ]
@@ -55,12 +55,12 @@ export default function Footer() {
             </div>
             <div className="copyright  text-gray-300 mx-auto  text-center text-[0.6rem] mt-8">
                 <p className="protest-g">
-                    2025 KALRAV. All rights reserved.
+                    2025 KALRAV. All Rights Reserved.
                 </p>
                 <p className="protest-g">
-                    Designed & Developed by KALRAV IT TEAM 
+                    Designed & Developed By KALRAV IT TEAM 
                 </p>
-            </div>
+            </div>  
         </footer>
     )
 }

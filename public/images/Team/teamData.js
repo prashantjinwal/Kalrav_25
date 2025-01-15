@@ -1,28 +1,123 @@
-const TeamData = [
+const core = [
     {
-        name:"XyZ",
-        img:"../../images/Team/Group 189.png",
-        post:"dsaf"
+        name: "Sanket Pathak",
+        img: "../../images/Team/Sanket_Pathak.png",
+        post: "Cultural Secretary"
     },
     {
-        name:"XyZ",
-        img:"../../images/Team/Group 189.png",
-        post:"fsad"
+        name: "Aryan Gurjar",
+        img: "../../images/Team/Aryan_Gurjar.png",
+        post: "Cultural Secretary"
     },
     {
-        name:"XyZ",
-        img:"../../images/Team/Group 189.png",
-        post:"gds"
+        name: "Yash Chandola",
+        img: "../../images/Team/Aryan_Gurjar.png",
+        post: "Mentor"
     },
     {
-        name:"XyZ",
-        img:"../../images/Team/Group 189.png",
-        post:"sfad"
+        name: "BharatKaushik",
+        img: "../../images/Team/Bharat_Kaushik.png",
+        post: "Alumni Mentor"
     },
     {
-        name:"XyZ",
-        img:"../../images/Team/Group 189.png",
-        post:"adf"
+        name: "Sudesh Chahar",
+        img: "../../images/Team/Sudesh_Chahar.png",
+        post: "OC Event Manager"
+    },
+    {
+        name: "Ayush Jain",
+        img: "../../images/Team/Ayush_Jain.png",
+        post: "OC Team Leader"
+    },
+    {
+        name: "Harshit Bhalothia",
+        img: "../../images/Team/Harshit_Bhalothia.png",
+        post: "OC Event Manager"
+    },
+    {
+        name: "Himanshu Lamba",
+        img: "../../images/Team/Harshit_Bhalothia.png",
+        post: "OC D&V Incharge"
     }
-]
-export default TeamData
+];
+
+  const Heads = [
+    {
+        name: "Prashant",
+        img: "../../images/Team/Prashant.png",
+        post: "IT and Technical Head"
+    },
+    {
+        name: "Sourabh Thakur",
+        img: "../../images/Team/Sourabh_Thakur.png",
+        post: "Graphic Head"
+    },
+    {
+        name: "Hardik Raj",
+        img: "../../images/Team/Hardik_Raj.png",
+        post: "Graphic Head"
+    },
+    {
+        name: "Ankit Verma",
+        img: "../../images/Team/Ankit_Verma.png",
+        post: "Marketing Head"
+    },
+    {
+        name: "Mayank Suri",
+        img: "../../images/Team/Mayank_Suri.png",
+        post: "Marketing Head"
+    },
+    {
+        name: "Sri Surya BB",
+        img: "../../images/Team/Sri_Surya_BB.png",
+        post: "Sponsorship Head"
+    },
+    {
+        name: "Deepan Khatri",
+        img: "../../images/Team/Deepan_Khatri.png",
+        post: "Hosp & Accom Head"
+    },
+    {
+        name: "Adrash Singh",
+        img: "../../images/Team/Adrash_Singh.png",
+        post: "Hosp & Accom Head"
+    },
+    {
+        name: "Pralakshi Baishya",
+        img: "../../images/Team/Pralakshi.png",
+        post: "Decoration Head"
+    },
+    {
+        name: "Aditya Raj",
+        img: "../../images/Team/Aditya_Raj.png",
+        post: "Security Head"
+    },
+    {
+        name: "Lalit Vaisnav",
+        img: "../../images/Team/Lalit_Vaisnav.png",
+        post: "Logistic Head"
+    },
+    {
+        name: "Rishabh Praida",
+        img: "../../images/Team/Rishabh_Praida.png",
+        post: "Finance & Budgeting"
+    },
+];
+
+  const Suc = [
+    {
+        name: "Priyanshu",
+        img: "../../images/Team/Priyanshu.png",
+        post: "President"
+    },
+    {
+        name: "Manyank",
+        img: "../../images/Team/Priyanshu.png",
+        post: "General Secretary"
+    },
+];
+
+
+export default {
+    Suc, core, Heads
+}
