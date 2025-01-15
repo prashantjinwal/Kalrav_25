@@ -15,7 +15,7 @@ const core = [
         post: "Mentor"
     },
     {
-        name: "BharatKaushik",
+        name: "Bharat Kaushik",
         img: "../../images/Team/Bharat_Kaushik.png",
         post: "Alumni Mentor"
     },
