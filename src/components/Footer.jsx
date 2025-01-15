@@ -22,6 +22,11 @@ export default function Footer() {
             link: 'https://www.youtube.com/DDUC',
             name: 'YouTube'
         },
+        {
+            imgUrl: '/images/icons/Email.png',
+            link: 'https://www.email.com/DDUC',
+            name: 'Email'
+        },
     ]
 
     return (
