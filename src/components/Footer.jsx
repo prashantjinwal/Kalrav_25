@@ -54,7 +54,7 @@ export default function Footer() {
                 <img src="/images/footerBg.png" alt="..." className='absolute -z-10 bottom-0 left-1/2 -translate-x-1/2 w-auto h-32 object-cover' />
             </div>
             <div className="copyright  text-gray-300 mx-auto  text-center text-[0.6rem] mt-8">
-                <p className="protest-g">
+                <p className="protest-g border-b-2 border-white">
                     2025 KALRAV. All Rights Reserved.
                 </p>
                 <p className="protest-g">
