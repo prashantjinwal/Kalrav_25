@@ -10,7 +10,7 @@ export default function Team() {
     return (
       <div className="pt-20 py-10 flex flex-col bg-gradient-to-r from-[#301F0E] to-[#FDA605]  justify-center items-center">
       {/* Core Cultural Council */}
-          <div className="bg-[url('/images/Group.png')] bg-cover w-[80%] lg:w-[50%] py-2 bg-no-repeat flex  justify-center lg:justify-around" >
+          <div className="bg-[url('/images/Group.png')] bg-cover w-[80%] lg:w-[50%]  bg-no-repeat flex  justify-center lg:justify-around" >
               <h3 className="text-black font-semibold text-2xl font-protest py-4 justify-center  ">Core Cultural Council </h3>
               
           </div>
@@ -32,7 +32,7 @@ export default function Team() {
           </div>
 
         {/* Team Heads */}
-          <div className="bg-[url('/images/Group.png')] bg-cover w-[80%] lg:w-[50%] py-2 bg-no-repeat flex  justify-center lg:justify-around" >
+          <div className="bg-[url('/images/Group.png')] bg-cover w-[80%] lg:w-[50%]  bg-no-repeat flex  justify-center lg:justify-around" >
               <h3 className="text-black font-semibold text-2xl font-protest py-4 justify-center  ">Team Heads </h3>
           </div>
           <div>
@@ -49,7 +49,7 @@ export default function Team() {
           </div>
 
         {/* Students Council */}
-          <div className="bg-[url('/images/Group.png')] bg-cover w-[80%] lg:w-[50%] py-2 bg-no-repeat flex  justify-center lg:justify-around" >
+          <div className="bg-[url('/images/Group.png')] bg-cover w-[80%] lg:w-[50%] bg-no-repeat flex  justify-center lg:justify-around" >
               <h3 className="text-black font-semibold text-2xl font-protest py-4 justify-center  ">Student Council </h3>
           </div>
           <div>
