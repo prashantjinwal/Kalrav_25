@@ -8,8 +8,8 @@ export default function TeamComp({ img, name, post }) {
           src={img}
           alt={name}
         />
-        <h3 className="font-protest text-lg text-gray-800">{name}</h3>
-        <p className="text-sm text-gray-500">{post}</p>
+        <h3 className="font-protest text-lg text-black">{name}</h3>
+        <p className="text-sm text-gray-200">{post}</p>
       </div>
     );
   }

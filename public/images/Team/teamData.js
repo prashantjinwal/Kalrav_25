@@ -45,7 +45,7 @@ const core = [
     {
         name: "Prashant",
         img: "../../images/Team/Prashant.png",
-        post: "IT and Technical Head"
+        post: "IT & Technical Head"
     },
     {
         name: "Sourabh Thakur",
