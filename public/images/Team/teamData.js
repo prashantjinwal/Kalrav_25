@@ -5,12 +5,12 @@ const core = [
         post: "Cultural Secretary"
     },
     {
-        name: "Aryan Gurjar",
-        img: "../../images/Team/Aryan_Gurjar.png",
+        name: "Yash Chandola",
+        img: "../../images/Team/Yash_Chandola.png",
         post: "Cultural Secretary"
     },
     {
-        name: "Yash Chandola",
+        name: "Aryan Gurjar",
         img: "../../images/Team/Aryan_Gurjar.png",
         post: "Mentor"
     },
@@ -20,15 +20,16 @@ const core = [
         post: "Alumni Mentor"
     },
     {
-        name: "Sudesh Chahar",
-        img: "../../images/Team/Sudesh_Chahar.png",
-        post: "OC Event Manager"
-    },
-    {
         name: "Ayush Jain",
         img: "../../images/Team/Ayush_Jain.png",
         post: "OC Team Leader"
     },
+    {
+        name: "Sudesh Chahar",
+        img: "../../images/Team/Sudesh_Chahar.png",
+        post: "OC Event Manager"
+    },
+    
     {
         name: "Harshit Bhalothia",
         img: "../../images/Team/Harshit_Bhalothia.png",
@@ -36,8 +37,8 @@ const core = [
     },
     {
         name: "Himanshu Lamba",
-        img: "../../images/Team/Harshit_Bhalothia.png",
-        post: "OC D&V Incharge"
+        img: "../../images/Team/Himanshu_Lamba.png",
+        post: "OC Discipline & Volunteer Incharge"
     }
 ];
 
@@ -75,12 +76,12 @@ const core = [
     {
         name: "Deepan Khatri",
         img: "../../images/Team/Deepan_Khatri.png",
-        post: "Hosp & Accom Head"
+        post: "Hospitality & Accommodation Head"
     },
     {
         name: "Adrash Singh",
         img: "../../images/Team/Adrash_Singh.png",
-        post: "Hosp & Accom Head"
+        post: "Hospitality & Accommodation Head"
     },
     {
         name: "Pralakshi Baishya",
@@ -111,8 +112,8 @@ const core = [
         post: "President"
     },
     {
-        name: "Manyank",
-        img: "../../images/Team/Priyanshu.png",
+        name: "Mayank",
+        img: "../../images/Team/Mayank.png",
         post: "General Secretary"
     },
 ];

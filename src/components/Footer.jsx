@@ -30,8 +30,8 @@ export default function Footer() {
     ]
 
     return (
-        <footer className='px-5 pt-8 pb-2 relative bg-gradient-to-t from-black/40 to-[#700409]/90  z-20'>
-            <div className="flex items-start justify-between lg:justify-around">
+        <footer className='px-5 pt-10 pb-4 relative bg-gradient-to-t from-black/40 to-[#700409]/90  z-20'>
+            <div className="flex items-start justify-between lg:justify-around py-1">
                 <div className="address">
                     <h1 className='name text-2xl font-protest text-[#D3A84C]'>DDUC</h1>
                     <p className=" font-protest text-xs  text-white ">DEEN DAYAL UPADHYAYA COLLEGE. DELHI UNIVERSITY,</p>
@@ -43,10 +43,10 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="social-media-links mt-6 mx-auto w-fit flex items-center gap-7">
+            <div className="social-media-links my-10 mx-auto w-fit flex items-center gap-7">
                 {socialMediaLinks.map((link, index) => (
                     <a href={link.link} key={index} className="text-white">
-                        <img src={link.imgUrl} className='h-8 w-auto object-cover' alt={link.name} />
+                        <img src={link.imgUrl} className='h-8 w-auto object-cover animate-pulse' alt={link.name} />
                     </a>
                 ))}
             </div>
