@@ -58,7 +58,7 @@ export default function Footer() {
                     2025 KALRAV. All Rights Reserved.
                 </p>
                 <p className="protest-g">
-                    Designed & Developed By KALRAV IT TEAM 
+                    Designed & Developed By <span className=" underline"> KALRAV IT TEAM </span>
                 </p>
             </div>  
         </footer>
