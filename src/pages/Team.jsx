@@ -10,7 +10,7 @@ export default function Team() {
   }, []);
 
   const SkeletonImage = () => (
-    <div className="w-40 h-40 rounded-full animate-pulse shadow-xl bg-gradient-to-br from-red-900 to-gray-700 bg-[length:100%_200%] animate-gradient"></div>
+    <div className="w-40 h-40 rounded-full animate-pulse shadow-xl bg-gradient-to-br from-red-900 to-black bg-[length:200%_200%] animate-gradient"></div>
   );
 
   const SkeletonText = () => (
