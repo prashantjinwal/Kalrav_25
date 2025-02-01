@@ -25,12 +25,12 @@ function App() {
 
   return (
     <>
-      {/* {loading &&
-      <div className={`loader-transition ${fadeOut ? 'opacity-0 transition-opacity duration-300' : 'opacity-100'}`}>
-        <HomagePageLoader />
-      </div>
-       } */}
-      {/* {!loading && */}
+      {loading &&
+        <div className={`loader-transition ${fadeOut ? 'opacity-0 transition-opacity duration-300' : 'opacity-100'}`}>
+          <HomagePageLoader />
+        </div>
+      }
+      {!loading &&
         <>
           <Header />
           <ScreenCompatibilityPopup />
@@ -43,8 +43,7 @@ function App() {
           </Routes>
           <Footer />
         </>
-
-      {/* } */}
+      }
     </>
   )
 }
