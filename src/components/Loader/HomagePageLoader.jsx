@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import './HomagePageLoader.css'; // Import the CSS file for styling
 
 export default function HomagePageLoader() {
     // const [speed, setSpeed] = useState(1.5); // State to control speed
@@ -12,7 +11,7 @@ export default function HomagePageLoader() {
 
     return (
         <div className={` loader-container bg-black h-screen w-screen flex flex-col items-center justify-center `}>
-            <img src="/images/header/logo.png" alt="Logo" className="h-[5rem] w-auto loader-logo animate-spin" style={{ animationDuration: `2000ms` }} />
+            <img src="/images/header/logo.png" alt="Logo" className="h-[5rem] w-auto loader-logo animate-spin" style={{ animationDuration: `3000ms` }} />
         </div>
     )
 }
