@@ -21,8 +21,8 @@ const faq = [
     },
     {
         id: 5,
-        question: "When and where will Kalrav 2024 take place?",
-        answer: "Kalrav DDUC 2024 is scheduled to take place SOON at DDUC campus."
+        question: "When and where will Kalrav 2025 take place?",
+        answer: "Kalrav DDUC 2025 is scheduled to take place SOON at DDUC campus."
     },
 ];
 

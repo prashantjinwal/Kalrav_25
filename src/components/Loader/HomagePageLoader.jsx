@@ -20,7 +20,7 @@ export default function HomagePageLoader() {
             <img 
                 src="/images/header/logo.png" 
                 alt="Logo" 
-                className="h-[5rem] w-auto animate-pulse drop-shadow-xl" 
+                className="h-[5rem]  w-auto animate-pulse drop-shadow-xl" 
                 style={{ animationDuration: '2000ms' }} 
             />
         </div>
