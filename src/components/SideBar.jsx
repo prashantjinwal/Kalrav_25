@@ -32,7 +32,7 @@ export default function SideBar({ hide }) {
         <div className="sidebar-container p-5 font-protest h-[100vh]  relative w-full  flex flex-col justify-between">
 
             <div className='bg-[#D9D9D9] opacity-70 absolute top-0 left-0 w-full h-full -z-10'> </div>
-            <div className="sidebar-top">
+            <div className="sidebar-top  ">
                 <button className="close-btn" onClick={hide}>
                     <img src="/images/sidebar/Katana.png" alt="Close" className="h-[1.9rem] h w-auto object-cover" />
                 </button>
@@ -51,7 +51,7 @@ export default function SideBar({ hide }) {
 
             {/* Logo */}
 
-            <div className="sidebar-bottom mx-auto mb-10 flex flex-col items-center w-fit relative ">
+            <div className="sidebar-bottom mx-auto mb-20 flex flex-col items-center w-fit relative ">
 
                 <span>
                     <img src="/images/sidebar/karlravLogo.png" alt='logo' className="h-9 w-auto" />
