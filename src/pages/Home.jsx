@@ -16,7 +16,7 @@ export default function Home() {
         <h1 className="text-center title font-protest text-[2.5rem] sm:text-[2.9rem] mb-2 font-medium">
           {title}
         </h1>
-        <div className="content max-w-[90%] sm:max-w-[80%] md:max-w-[75%] lg:max-w-[60%] mx-auto px-4 sm:px-8 text-center text-sm sm:text-base md:text-lg lg:text-xl text-black font-noto leading-relaxed">
+        <div className="content  mx-auto px-1 sm:px-1 text-center text-sm sm:text-base md:text-lg lg:text-xl text-black font-noto leading-relaxed">
           <p>{content}</p>
         </div>
       </div>
