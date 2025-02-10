@@ -1,58 +1,26 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import faq from "../../public/data/FaqData.js";
+import Card from "../components/home/Card.jsx";
+import FAQItem from "../components/home/FAQItem.jsx";
+import EventsCarousel from "../components/home/EventsCarousel.jsx";
 
 export default function Home() {
-  // Card component
-  const Card = ({ title, content, content_bg_image, img_op }) => (
-    <div className="card w-full h-full bg-[url('/images/home/cardBg.png')] bg-no-repeat bg-cover bg-center p-4 rounded-3xl relative">
 
-      <img
-        src={content_bg_image}
-        alt="Card background"
-        className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain"
-        style={{ opacity: img_op / 100 }}
-      />
-
-      <div className="p-4 corner-dots">
-        <h1 className="text-center title font-protest text-[2.9rem] mb-2 font-medium ">{title}</h1>
-        <div className="content w-full">
-          <p className="text-left text-sm font-noto pb-5">{content}</p>
-        </div>
-      </div>
-    </div>
-  );
-
-  // FAQ dropdown component
-  const FAQItem = ({ question, answer }) => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    return (
-      <div className="mb-2">
-        <button
-          className="flex items-center w-full text-left gap-5 px-4 py-2 rounded-md bg-gradient-to-r from-[#CBA247] via-[#987935] to-[#655123] hover:brightness-110 transition-all duration-300"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-expanded={isOpen}
-        >
-          <img
-            src="/images/icons/shuriken.png"
-            className={`w-8 h-auto transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-            alt="Toggle dropdown"
-          />
-          <span className="font-medium font-protest">{question}</span>
-        </button>
-        <div
-          className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-            }`}
-        >
-          <div className="mt-2 bg-[#987935] rounded-lg px-4 py-3 shadow-lg font-noto">
-            <p className="text-gray-100">{answer}</p>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
+  const handleSlideChange = (index) => {
+    if (index == -1) {
+      if (activeSlide > 0) { setActiveSlide(activeSlide - 1); }
+      else {
+        setActiveSlide(previous_events.length - 1);
+      }
+    }
+    else {
+      if (activeSlide < previous_events.length - 1) { setActiveSlide(activeSlide + 1); }
+      else {
+        setActiveSlide(0);
+      }
+    }
+  }
   // Data for cards
   const cardContents = [
     {
@@ -62,7 +30,7 @@ export default function Home() {
       content_bg_image: "/images/samurai/2.png",
       img_op: 80
     },
-    
+
     {
       title: "ABOUT",
       content:
@@ -70,8 +38,8 @@ export default function Home() {
       content_bg_image: "/images/samurai/3.png",
       img_op: 40
     }
-    
-    
+
+
   ];
 
   // Japanese text list
@@ -80,6 +48,30 @@ export default function Home() {
     "毎年恒例の祭典で新たな冒険が始まる",
     "伝統と革新が織りなす壮大な物語",
     "未来への扉を開く祝祭の夜明け",
+  ];
+
+
+  const previous_events = [
+    {
+      image: "/images/Team/prashant2.png",
+      name: "Cultural Night 2023",
+      description: "An enchanting evening filled with traditional performances and modern interpretations showcasing our rich cultural heritage."
+    },
+    {
+      image: "/images/Team/prashant2.png",
+      name: "Music Fest 2022",
+      description: "A night of electrifying performances by top artists, leaving the audience spellbound with their musical prowess."
+    },
+    {
+      image: "/images/Team/prashant2.png",
+      name: "Art Exhibition 2021",
+      description: "A display of stunning artworks from talented artists, capturing the essence of creativity and innovation."
+    },
+    {
+      image: "/images/Team/prashant2.png",
+      name: "Dance Extravaganza 2020",
+      description: "A mesmerizing showcase of dance performances, blending classical and contemporary styles in perfect harmony."
+    }
   ];
 
   return (
@@ -143,8 +135,16 @@ export default function Home() {
               <FAQItem key={item.id} question={item.question} answer={item.answer} />
             ))}
           </div>
+          <div className="px-4 pt-6 flex justify-center">
+            <img src="/images/divider.png" alt="" loading="lazy" />
+          </div>
         </div>
 
+
+        {/* prvious year event */}
+        <div className="bg-[url('/images/home/cardBg.png')] bg-no-repeat bg-cover relative">
+          <EventsCarousel previous_events={previous_events} />
+        </div>
 
       </div>
     </div>

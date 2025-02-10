@@ -7,20 +7,29 @@ import Sponsers from "./pages/Sponsers"
 import Team from "./pages/Team"
 import Competition from "./pages/competition"
 import ScreenCompatibilityPopup from "./components/ScreenCompatibilityPopup"
-import Test from "./pages/Test"
 import { useEffect, useState } from "react"
 import HomagePageLoader from "./components/Loader/HomagePageLoader"
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
+
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
-    }, 4000);
+      setFadeOut(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 300); // Match the duration of the fade-out transition
+    }, 3000);
   }, []);
+
   return (
     <>
-      {loading && <HomagePageLoader />}
+      {loading &&
+        <div className={`loader-transition ${fadeOut ? 'opacity-0 transition-opacity duration-300' : 'opacity-100'}`}>
+          <HomagePageLoader />
+        </div>
+      }
       {!loading &&
         <>
           <Header />
@@ -31,14 +40,12 @@ function App() {
             <Route path="/Sponsers" element={<Sponsers />} />
             <Route path="/Team" element={<Team />} />
             <Route path="/Competition" element={<Competition />} />
-            <Route path="/test" element={<Test />} />
           </Routes>
           <Footer />
         </>
-
       }
     </>
   )
 }
 
-export default App
+export default App;
