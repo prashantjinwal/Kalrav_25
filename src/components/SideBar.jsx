@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
@@ -21,48 +20,46 @@ export default function SideBar({ hide }) {
             link: '/Sponsers',
         },
         {
-            name: 'Team',
+            name: 'Meet The Team',
             link: '/Team',
         },
     ];
 
     return (
-
-
-        <div className="sidebar-container p-5 font-protest h-[100vh]  relative w-full  flex flex-col justify-between">
-
-            <div className='bg-[#D9D9D9] opacity-70 absolute top-0 left-0 w-full h-full -z-10'> </div>
-            <div className="sidebar-top  ">
+        <div className="sidebar-container p-5 h-[85vh] relative w-full  rounded-l-3xl">
+            <div className='bg-black opacity-80 backdrop-blur-md  absolute top-0 left-0 w-full h-full -z-10 rounded-l-3xl'> </div>
+            <div className="sidebar-top">
                 <button className="close-btn" onClick={hide}>
-                    <img src="/images/sidebar/Katana.png" alt="Close" className="h-[1.9rem] h w-auto object-cover" />
+                    <div className="relative w-6 h-6">
+                        <div className="absolute w-6 h-[2px] bg-gradient-to-r from-white from-50% to-gray-600 transform rotate-45 top-1/2 -translate-y-1/2"></div>
+                        <div className="absolute w-6 h-[2px] bg-gradient-to-l from-white from-50% to-gray-600 transform -rotate-45 top-1/2 -translate-y-1/2"></div>
+                    </div>
                 </button>
             </div>
-            <nav className="sidebar-center">
-                <ul className="flex flex-col gap-8">
-                    {navigationItems.map((item) => (
-                        <li key={item.name} className='bg-[url("/images/sidebar/linkBg.png")] bg-contain bg-w bg-no-repeat bg-center relative font-protest'>
-                            <Link onClick={hide} to={item.link} className="block text-3xl font-medium text-center font-protest p-2 text-white rounded-md  relative">
-                                {item.name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
+            <div className="flex flex-col justify-between h-full">
+                <div className="sidebar-center mt-10">
+                    <ul className="flex flex-col gap-4">
+                        {navigationItems.map((item) => (
+                            <li key={item.name} className=' '>
+                                <Link onClick={hide} to={item.link} className="block text-3xl hover:bg-gradient-to-br w-fit   from-pink-600  via-red-600 to-black   text-left   p-2  text-white rounded-3xl  fonst-sans">
+                                    {item.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                    <hr className="border-white opacity-50  my-4 mx-3" />
+                </div>
 
-            {/* Logo */}
 
-            <div className="sidebar-bottom mx-auto mb-20 flex flex-col items-center w-fit relative ">
-
-                <span>
-                    <img src="/images/sidebar/karlravLogo.png" alt='logo' className="h-9 w-auto" />
-                </span>
-                <span className='transform -translate-x-2 -mt-[5px]'>
-                    <img src="/images/sidebar/HrSword.png" alt="..." className='w-[154px] h-auto' />
-                </span>
-                <span>
-                    <p className="font-protest text-2xl font-medium transform -mt-4 translate-x-12  ">2025</p>
-                </span>
+                <div className="sidebar-bottom mx-auto  flex flex-col items-center w-fit pb-10">
+                    <span className='h-16 overflow-hidden'>
+                        <img src="/images/kalrav-logo.png" alt='logo' className="h-[6.5rem] w-auto" />
+                    </span>
+                    <span>
+                        <p className=" text-lg text-white font-sans ">2025</p>
+                    </span>
+                </div>
             </div>
-        </div >
+        </div>
     )
 }

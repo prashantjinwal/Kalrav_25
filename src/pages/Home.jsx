@@ -76,8 +76,8 @@ export default function Home() {
 
   return (
     <div className="home-page-container mt-[8rem]">
-      <div className="py-4 relative page-top">
-        <div className="absolute top-0 left-0 w-full flex flex-col gap-[30px] z-0">
+      {/* <div className="py-4 relative page-top"> */}
+        {/* <div className="absolute top-0 left-0 w-full flex flex-col gap-[30px] z-0">
           {textList.map((text, index) => (
             <div
               key={index}
@@ -90,12 +90,6 @@ export default function Home() {
                   <span key={i}>{text}</span>
                 ))}
               </div>
-              {/* <div className="inline-flex whitespace-nowrap  animate-infinite-scroll">
-                <span>{text}</span>
-                <span>{text}</span>
-                <span>{text}</span>
-                <span>{text}</span>
-              </div> */}
             </div>
           ))}
         </div>
@@ -105,7 +99,7 @@ export default function Home() {
           className="block object-cover h-auto w-[70vw] max-w-[400px] mx-auto relative z-10 -mt-16"
           loading="lazy"
         />
-      </div>
+      </div> */}
 
       <div className="w-full sm:w-9/12 md:w-[65%] lg:w-1/2 mx-auto">
         {/* Cards Section */}
