@@ -11,6 +11,7 @@ module.exports = {
         'noto': ['Noto-Sans'],
         'imonoid': ['Imonoid', 'monospace'],
         'protest-guerrilla': ['Protest Guerrilla', 'cursive'],
+        'dm-sans': ['DM Sans', 'sans-serif'],
       },
       keyframes: {
         'infinite-scroll': {

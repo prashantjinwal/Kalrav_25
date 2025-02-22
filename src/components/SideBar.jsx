@@ -41,7 +41,7 @@ export default function SideBar({ hide }) {
                     <ul className="flex flex-col gap-4">
                         {navigationItems.map((item) => (
                             <li key={item.name} className=' '>
-                                <Link onClick={hide} to={item.link} className="block text-3xl hover:bg-gradient-to-br w-fit   from-pink-600  via-red-600 to-black   text-left   p-2  text-white rounded-3xl  fonst-sans">
+                                <Link onClick={hide} to={item.link} className="block text-3xl hover:bg-gradient-to-br w-fit   from-pink-600  via-red-600 to-black   text-left   p-2  text-white rounded-3xl  font-dm-sans">
                                     {item.name}
                                 </Link>
                             </li>
@@ -56,7 +56,7 @@ export default function SideBar({ hide }) {
                         <img src="/images/kalrav-logo.png" alt='logo' className="h-[6.5rem] w-auto" />
                     </span>
                     <span>
-                        <p className=" text-lg text-white font-sans ">2025</p>
+                        <p className=" text-lg text-white font-dm-sans ">2025</p>
                     </span>
                 </div>
             </div>

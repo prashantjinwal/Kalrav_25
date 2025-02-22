@@ -1,26 +1,10 @@
-/* eslint-disable react/prop-types */
-import { useState } from "react";
 import faq from "../../public/data/FaqData.js";
 import Card from "../components/home/Card.jsx";
 import FAQItem from "../components/home/FAQItem.jsx";
-import EventsCarousel from "../components/home/EventsCarousel.jsx";
+import ReviewsByAttendees from "../components/home/ReviewsByAttendees.jsx";
 
 export default function Home() {
 
-  const handleSlideChange = (index) => {
-    if (index == -1) {
-      if (activeSlide > 0) { setActiveSlide(activeSlide - 1); }
-      else {
-        setActiveSlide(previous_events.length - 1);
-      }
-    }
-    else {
-      if (activeSlide < previous_events.length - 1) { setActiveSlide(activeSlide + 1); }
-      else {
-        setActiveSlide(0);
-      }
-    }
-  }
   // Data for cards
   const cardContents = [
     {
@@ -42,42 +26,11 @@ export default function Home() {
 
   ];
 
-  // Japanese text list
-  const textList = [
-    "祭典カルラヴの復活は興奮の期待",
-    "毎年恒例の祭典で新たな冒険が始まる",
-    "伝統と革新が織りなす壮大な物語",
-    "未来への扉を開く祝祭の夜明け",
-  ];
-
-
-  const previous_events = [
-    {
-      image: "/images/Team/prashant2.png",
-      name: "Cultural Night 2023",
-      description: "An enchanting evening filled with traditional performances and modern interpretations showcasing our rich cultural heritage."
-    },
-    {
-      image: "/images/Team/prashant2.png",
-      name: "Music Fest 2022",
-      description: "A night of electrifying performances by top artists, leaving the audience spellbound with their musical prowess."
-    },
-    {
-      image: "/images/Team/prashant2.png",
-      name: "Art Exhibition 2021",
-      description: "A display of stunning artworks from talented artists, capturing the essence of creativity and innovation."
-    },
-    {
-      image: "/images/Team/prashant2.png",
-      name: "Dance Extravaganza 2020",
-      description: "A mesmerizing showcase of dance performances, blending classical and contemporary styles in perfect harmony."
-    }
-  ];
 
   return (
     <div className="home-page-container mt-[8rem]">
       {/* <div className="py-4 relative page-top"> */}
-        {/* <div className="absolute top-0 left-0 w-full flex flex-col gap-[30px] z-0">
+      {/* <div className="absolute top-0 left-0 w-full flex flex-col gap-[30px] z-0">
           {textList.map((text, index) => (
             <div
               key={index}
@@ -104,6 +57,7 @@ export default function Home() {
       <div className="w-full sm:w-9/12 md:w-[65%] lg:w-1/2 mx-auto">
         {/* Cards Section */}
         <div className="p-8 sm:mt-10 flex flex-col gap-6 mx-auto font-noto ">
+
           {cardContents.map((card, index) => (
             <div key={index}>
               <Card
@@ -119,25 +73,44 @@ export default function Home() {
           ))}
         </div>
 
-        {/* FAQ Section */}
-        <div className="px-5 pb-10">
-          <h1 className="heading text-[2.9rem] font-medium font-protest text-center text-black  p-2 rounded-lg">
-            FAQ
-          </h1>
-          <div className="mt-5 faq-wrapper flex flex-col gap-4 py-5 bg-black rounded-lg">
-            {faq.map((item) => (
-              <FAQItem key={item.id} question={item.question} answer={item.answer} />
-            ))}
+
+
+        {/* past society events
+        <div className="py-5">
+          <div className="px-8">
+            <h1 className=" heading text-3xl font-dm-sans text-center text-white p-2 rounded-3xl border border-[#ff006a]" >
+              Reviews by attendees
+            </h1>
           </div>
-          <div className="px-4 pt-6 flex justify-center">
-            <img src="/images/divider.png" alt="" loading="lazy" />
+          <div className="relative overflow-hidden w-full mt-10">
+            <SmoothCarousel card={}/>
+          </div>
+        </div> */}
+
+
+
+        {/* reviews by attendess */}
+        <div className="py-5">
+          <div className="px-8">
+            <h1 className=" heading text-3xl font-dm-sans text-center text-white p-2 rounded-3xl border border-[#ff006a]" >
+              Reviews by attendees
+            </h1>
+          </div>
+          <div className="relative overflow-hidden w-full mt-10">
+            <ReviewsByAttendees/>
           </div>
         </div>
 
-
-        {/* prvious year event */}
-        <div className="bg-[url('/images/home/cardBg.png')] bg-no-repeat bg-cover relative">
-          <EventsCarousel previous_events={previous_events} />
+        {/* FAQ Section */}
+        <div className="px-8 pt-5 pb-14">
+          <h1 className="heading text-3xl font-dm-sans text-center text-white p-2 rounded-3xl border border-[#ff006a]" >
+            FAQ
+          </h1>
+          <div className="mt-10 faq-wrapper flex flex-col gap-6 items-center px-2 ">
+            {faq.map((item) => (
+              <FAQItem key={item.question} question={item.question} answer={item.answer} />
+            ))}
+          </div>
         </div>
 
       </div>
