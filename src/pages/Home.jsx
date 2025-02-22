@@ -99,7 +99,7 @@ export default function Home() {
           className="block object-cover h-auto w-[70vw] max-w-[400px] mx-auto relative z-10 -mt-16"
           loading="lazy"
         />
-      </div> */}
+      </div> */}  
 
       <div className="w-full sm:w-9/12 md:w-[65%] lg:w-1/2 mx-auto">
         {/* Cards Section */}
@@ -136,9 +136,9 @@ export default function Home() {
 
 
         {/* prvious year event */}
-        <div className="bg-[url('/images/home/cardBg.png')] bg-no-repeat bg-cover relative">
+        {/* <div className="bg-[url('/images/home/cardBg.png')] bg-no-repeat bg-cover relative">
           <EventsCarousel previous_events={previous_events} />
-        </div>
+        </div> */}
 
       </div>
     </div>
