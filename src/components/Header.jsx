@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import SideBar from './SideBar';
 import { useNavigate } from 'react-router-dom';
+import { MenuIcon } from 'lucide-react';
 
 export default function Header() {
     // State management
@@ -40,30 +41,35 @@ export default function Header() {
     const handleLogoClick = () => navigate('/');
 
     return (
-        <header className="header p-4">
-            <div
+        <header className="header ">
+            {/* <div
                 className={`header p-4 fixed top-0 left-0 w-full z-40 transform transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
                     }`}
+            > */}
+            <div
+                className={`header px-4 py-5 fixed top-0 left-0 w-full z-40 transform transition-transform duration-300 `}
             >
                 {/* Header background and logo */}
-                <div className="bg-[url('/images/header/headerBg.png')] bg-cover bg-no-repeat flex items-center justify-between lg:justify-around">
-                    <div className="logo cursor-pointer" onClick={handleLogoClick}>
-                        <img src="/images/header/logo.png" alt="Logo" className="h-10 w-auto" />
+                <div className="bg-transparent  px-4 backdrop-blur-md  h-[3.25rem] overflow-hidden border border-[#ff006a]  rounded-[1.8rem] flex items-center justify-between lg:justify-around">
+                    <div className="logo cursor-pointer  " onClick={handleLogoClick}>
+                        <img src="/images/kalrav-logo.png" alt="Logo" className="h-[6.5rem]  w-auto object-cover" />
                     </div>
-
                     <button className="menu-btn" onClick={toggleSidebar}>
-                        <img src="/images/header/hamburger.png" alt="Menu" className="hamburger w-auto h-9" />
+                        <div className="flex flex-col gap-1 hamburger-menu">
+                            <div className="w-6 h-[3px] bg-gradient-to-tr from-[#D9D9D9] to-[#737373]"></div>
+                            <div className="w-6 h-[3px] bg-gradient-to-tr from-[#D9D9D9] to-[#737373]"></div>
+                            <div className="w-6 h-[3px] bg-gradient-to-tr from-[#D9D9D9] to-[#737373]"></div>
+                        </div>
                     </button>
                 </div>
 
                 {/* Sidebar component */}
                 <div
-                    className={`fixed top-0 right-0 w-[75%] sm:w-1/2 lg:w-[30%] transform transition-all duration-300 z-[100] ${showSidebar ? 'translate-x-0' : 'translate-x-full'
+                    className={`fixed  top-20 h-fit right-0 w-[70%] sm:w-1/2 lg:w-[30%] transform transition-all duration-300 z-[100] ${showSidebar ? 'translate-x-0' : 'translate-x-full'
                         }`}
                 >
                     <SideBar hide={closeSidebar} />
                 </div>
-
                 {/* Overlay when sidebar is open */}
                 {showSidebar && (
                     <div
