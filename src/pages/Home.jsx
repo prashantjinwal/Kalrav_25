@@ -1,26 +1,11 @@
-/* eslint-disable react/prop-types */
-import { useState } from "react";
 import faq from "../../public/data/FaqData.js";
 import Card from "../components/home/Card.jsx";
 import FAQItem from "../components/home/FAQItem.jsx";
-import EventsCarousel from "../components/home/EventsCarousel.jsx";
+import ReviewsByAttendees from "../components/home/ReviewsByAttendees.jsx";
+import CountdownTimer from "../components/home/CountdownTimer.jsx";
 
 export default function Home() {
 
-  const handleSlideChange = (index) => {
-    if (index == -1) {
-      if (activeSlide > 0) { setActiveSlide(activeSlide - 1); }
-      else {
-        setActiveSlide(previous_events.length - 1);
-      }
-    }
-    else {
-      if (activeSlide < previous_events.length - 1) { setActiveSlide(activeSlide + 1); }
-      else {
-        setActiveSlide(0);
-      }
-    }
-  }
   // Data for cards
   const cardContents = [
     {
@@ -42,105 +27,73 @@ export default function Home() {
 
   ];
 
-  // Japanese text list
-  const textList = [
-    "祭典カルラヴの復活は興奮の期待",
-    "毎年恒例の祭典で新たな冒険が始まる",
-    "伝統と革新が織りなす壮大な物語",
-    "未来への扉を開く祝祭の夜明け",
-  ];
-
-
-  const previous_events = [
-    {
-      image: "/images/Team/prashant2.png",
-      name: "Cultural Night 2023",
-      description: "An enchanting evening filled with traditional performances and modern interpretations showcasing our rich cultural heritage."
-    },
-    {
-      image: "/images/Team/prashant2.png",
-      name: "Music Fest 2022",
-      description: "A night of electrifying performances by top artists, leaving the audience spellbound with their musical prowess."
-    },
-    {
-      image: "/images/Team/prashant2.png",
-      name: "Art Exhibition 2021",
-      description: "A display of stunning artworks from talented artists, capturing the essence of creativity and innovation."
-    },
-    {
-      image: "/images/Team/prashant2.png",
-      name: "Dance Extravaganza 2020",
-      description: "A mesmerizing showcase of dance performances, blending classical and contemporary styles in perfect harmony."
-    }
-  ];
 
   return (
-    <div className="home-page-container mt-[8rem]">
-      {/* <div className="py-4 relative page-top"> */}
-        {/* <div className="absolute top-0 left-0 w-full flex flex-col gap-[30px] z-0">
-          {textList.map((text, index) => (
-            <div
-              key={index}
-              className="text-center text-white text-3xl py-1 w-full overflow-hidden bg-black bg-opacity-40 whitespace-nowrap font-noto text-opacity-80"
-              lang="ja"
-              translate="no"
-            >
-              <div className={`animate-scrolling inline-flex whitespace-nowrap  ${index % 2 === 0 ? 'animate-scroll-right' : 'animate-scroll-left'}`}>
-                {[...Array(6)].map((_, i) => (
-                  <span key={i}>{text}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-        <img
-          src="/images/samurai/1.png"
-          alt="Main decoration"
-          className="block object-cover h-auto w-[70vw] max-w-[400px] mx-auto relative z-10 -mt-16"
-          loading="lazy"
-        />
-      </div> */}  
+    <div className="home-page-container pt-20 pb-10">
 
-      <div className="w-full sm:w-9/12 md:w-[65%] lg:w-1/2 mx-auto">
-        {/* Cards Section */}
-        <div className="p-8 sm:mt-10 flex flex-col gap-6 mx-auto font-noto ">
-          {cardContents.map((card, index) => (
-            <div key={index}>
-              <Card
-                title={card.title}
-                content={card.content}
-                content_bg_image={card.content_bg_image}
-                img_op={card.img_op}
-              />
-              <div className="px-4 pt-6 flex justify-center">
-                <img src="/images/divider.png" alt="" loading="lazy" />
-              </div>
-            </div>
-          ))}
+      <div className="landing-page-container overflow-hidden relative mt-5">
+        <div className="mx-auto  w-fit">
+          <h1 className="text-[#BA91AB] text-3xl  font-pessanger-sans-bold font-bold text-left">THE</h1>
+          <h1 className="font-druk-wide-bold text-[5rem] -mt-3 text-white   text-left ">WAIT</h1>
+        </div>
+        <div className="image-container w-full overflow-hidden z-10 -mt-12 flex justify-center relative">
+          <img src="/images/home/samurai.png" alt="Image" className="w-auto h-[27rem] lg:h-[28rem] object-cover relative z-10" />
+        </div>
+        <div className="z-30 relative -mt-10 mx-auto w-fit">
+           <p className="font-druk-wide-bold text-[3.4rem] flex gap-4">
+              <span className="text-[#00FFDD]">IS</span>
+              <span className="text-[#EEFF00]">OVER</span>
+            </p>   
+        </div>
+        <div className="date-and-timer flex flex-col gap-5 justify-center py-2">
+          <h2 className="dates font-bebas-neue text-3xl text-center text-white">MARCH 6, 7, 8</h2>
+          <div className="timer">
+            <CountdownTimer />
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div className="w-full  lg:w-1/2 mx-auto">
+        {/* past society events
+        <div className="py-5">
+          <div className="px-8">
+            <h1 className=" heading text-2xl font-dm-sans text-center text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
+              Reviews by attendees
+            </h1>
+          </div>
+          <div className="relative overflow-hidden w-full mt-10">
+            <SmoothCarousel card={}/>
+          </div>
+        </div> */}
+        {/* reviews by attendess */}
+        <div className="py-5 ">
+          <div className="px-8">
+          <h1 className=" heading text-2xl font-dm-sans text-center   text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
+            Reviews by attendees
+          </h1>
+          </div>
+
+          <div className="relative overflow-hidden w-full mt-10">
+            <ReviewsByAttendees />
+          </div>
         </div>
 
         {/* FAQ Section */}
-        <div className="px-5 pb-10">
-          <h1 className="heading text-[2.9rem] font-medium font-protest text-center text-black  p-2 rounded-lg">
+        <div className="py-5 px-8">
+          <h1 className="heading text-2xl font-dm-sans  text-center text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
             FAQ
           </h1>
-          <div className="mt-5 faq-wrapper flex flex-col gap-4 py-5 bg-black rounded-lg">
+          <div className="mt-10 faq-wrapper flex flex-col gap-6 items-center px-2 ">
             {faq.map((item) => (
-              <FAQItem key={item.id} question={item.question} answer={item.answer} />
+              <FAQItem key={item.question} question={item.question} answer={item.answer} />
             ))}
           </div>
-          <div className="px-4 pt-6 flex justify-center">
-            <img src="/images/divider.png" alt="" loading="lazy" />
-          </div>
         </div>
-
-
-        {/* prvious year event */}
-        {/* <div className="bg-[url('/images/home/cardBg.png')] bg-no-repeat bg-cover relative">
-          <EventsCarousel previous_events={previous_events} />
-        </div> */}
-
       </div>
     </div>
+
   );
 }

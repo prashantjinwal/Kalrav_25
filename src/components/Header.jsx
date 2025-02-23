@@ -46,11 +46,10 @@ export default function Header() {
                 className={`header p-4 fixed top-0 left-0 w-full z-40 transform transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
                     }`}
             > */}
-            <div
-                className={`header px-4 py-5 fixed top-0 left-0 w-full z-40 transform transition-transform duration-300 `}
+            <div className={` px-4 py-5 fixed top-0 left-0 w-full z-40 transform transition-transform duration-300 `}
             >
                 {/* Header background and logo */}
-                <div className="bg-transparent  px-4 backdrop-blur-md  h-[3.25rem] overflow-hidden border border-[#ff006a]  rounded-[1.8rem] flex items-center justify-between lg:justify-around">
+                <div  className="bg-transparent  px-4 backdrop-blur-md  h-[3.25rem] overflow-hidden  flex items-center justify-between lg:justify-around border border-[#FF00A6] rounded-3xl ">
                     <div className="logo cursor-pointer  " onClick={handleLogoClick}>
                         <img src="/images/kalrav-logo.png" alt="Logo" className="h-[6.5rem]  w-auto object-cover" />
                     </div>
