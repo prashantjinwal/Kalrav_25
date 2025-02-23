@@ -55,6 +55,10 @@
     font-family: "Passenger Sans";
     src: url("/fonts/PassengerSans-Black-BF63eaffd2d0027.otf");
 }
+@font-face {
+    font-family: "Nikkyou Sans";
+    src: url("/fonts/NikkyouSans-mLKax.ttf");
+}
 
 .protest-g {
     font-family: "protest-guerrilla";

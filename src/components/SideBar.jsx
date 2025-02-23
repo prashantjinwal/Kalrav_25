@@ -26,7 +26,7 @@ export default function SideBar({ hide }) {
     ];
 
     return (
-        <div className="sidebar-container p-5 h-[85vh] relative w-full  rounded-l-3xl">
+        <div className="sidebar-container p-5 h-full relative w-full  rounded-l-3xl">
             <div className='bg-black opacity-80 backdrop-blur-md  absolute top-0 left-0 w-full h-full -z-10 rounded-l-3xl'> </div>
             <div className="sidebar-top">
                 <button className="close-btn" onClick={hide}>
@@ -40,8 +40,8 @@ export default function SideBar({ hide }) {
                 <div className="sidebar-center mt-10">
                     <ul className="flex flex-col gap-4">
                         {navigationItems.map((item) => (
-                            <li key={item.name} className=' '>
-                                <Link onClick={hide} to={item.link} className="block text-3xl hover:bg-gradient-to-br w-fit   from-pink-600  via-red-600 to-black   text-left   p-2  text-white rounded-3xl  font-dm-sans">
+                            <li key={item.name} className=' ' onClick={hide}>
+                                <Link to={item.link} className="block text-2xl hover:bg-gradient-to-br w-fit   from-pink-600  via-red-600 from-[20%] via-[79%] to-black   text-left   px-2 py-1  text-white rounded-3xl  font-dm-sans">
                                     {item.name}
                                 </Link>
                             </li>
@@ -50,13 +50,12 @@ export default function SideBar({ hide }) {
                     <hr className="border-white opacity-50  my-4 mx-3" />
                 </div>
 
-
                 <div className="sidebar-bottom mx-auto  flex flex-col items-center w-fit pb-10">
                     <span className='h-16 overflow-hidden'>
                         <img src="/images/kalrav-logo.png" alt='logo' className="h-[6.5rem] w-auto" />
                     </span>
                     <span>
-                        <p className=" text-lg text-white font-dm-sans ">2025</p>
+                        <p className="  text-white font-light text-xs font-nikkyou-sans mt-5">2025</p>
                     </span>
                 </div>
             </div>
