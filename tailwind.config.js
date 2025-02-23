@@ -11,7 +11,10 @@ module.exports = {
         'noto': ['Noto-Sans'],
         'imonoid': ['Imonoid', 'monospace'],
         'protest-guerrilla': ['Protest Guerrilla', 'cursive'],
-        'dm-sans': ['DM Sans', 'sans-serif'],
+        'dm-sans': ['DM Sans'],
+        'bebas-neue': ['Bebas Neue'],
+        'druk-wide-bold': ['Druk Wide Bold'],
+        'pessanger-sans-bold': ['Passenger Sans'],
       },
       keyframes: {
         'infinite-scroll': {

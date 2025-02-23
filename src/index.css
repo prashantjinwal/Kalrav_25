@@ -1,6 +1,5 @@
 /* MUsing Google Fonts CDN */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,12 +38,22 @@
     .corner-dots span::after {
         bottom: 0;
         right: 0;
-    }
+    }      
 }
 
 @font-face {
     font-family: protest-guerrilla;
-    src: url("public/images/home/protest-guerrilla");
+    src: url("/images/home/protest-guerrilla");
+}
+
+@font-face {
+    font-family: "Druk Wide Bold";
+    src: url("/fonts/DrukWideBold.ttf");
+}
+
+@font-face {
+    font-family: "Passenger Sans";
+    src: url("/fonts/PassengerSans-Black-BF63eaffd2d0027.otf");
 }
 
 .protest-g {

@@ -2,6 +2,7 @@ import faq from "../../public/data/FaqData.js";
 import Card from "../components/home/Card.jsx";
 import FAQItem from "../components/home/FAQItem.jsx";
 import ReviewsByAttendees from "../components/home/ReviewsByAttendees.jsx";
+import CountdownTimer from "../components/home/CountdownTimer.jsx";
 
 export default function Home() {
 
@@ -28,57 +29,38 @@ export default function Home() {
 
 
   return (
-    <div className="home-page-container mt-[8rem]">
-      {/* <div className="py-4 relative page-top"> */}
-      {/* <div className="absolute top-0 left-0 w-full flex flex-col gap-[30px] z-0">
-          {textList.map((text, index) => (
-            <div
-              key={index}
-              className="text-center text-white text-3xl py-1 w-full overflow-hidden bg-black bg-opacity-40 whitespace-nowrap font-noto text-opacity-80"
-              lang="ja"
-              translate="no"
-            >
-              <div className={`animate-scrolling inline-flex whitespace-nowrap  ${index % 2 === 0 ? 'animate-scroll-right' : 'animate-scroll-left'}`}>
-                {[...Array(6)].map((_, i) => (
-                  <span key={i}>{text}</span>
-                ))}
-              </div>
-            </div>
-          ))}
+    <div className="home-page-container pt-20 pb-10">
+
+      <div className="landing-page-container overflow-hidden relative mt-5">
+        <div className="mx-auto  w-fit">
+          <h1 className="text-[#BA91AB] text-3xl  font-pessanger-sans-bold font-bold text-left">THE</h1>
+          <h1 className="font-druk-wide-bold text-[5rem] -mt-3 text-white   text-left ">WAIT</h1>
         </div>
-        <img
-          src="/images/samurai/1.png"
-          alt="Main decoration"
-          className="block object-cover h-auto w-[70vw] max-w-[400px] mx-auto relative z-10 -mt-16"
-          loading="lazy"
-        />
-      </div> */}  
-
-      <div className="w-full sm:w-9/12 md:w-[65%] lg:w-1/2 mx-auto">
-        {/* Cards Section */}
-        <div className="p-8 sm:mt-10 flex flex-col gap-6 mx-auto font-noto ">
-
-          {cardContents.map((card, index) => (
-            <div key={index}>
-              <Card
-                title={card.title}
-                content={card.content}
-                content_bg_image={card.content_bg_image}
-                img_op={card.img_op}
-              />
-              <div className="px-4 pt-6 flex justify-center">
-                <img src="/images/divider.png" alt="" loading="lazy" />
-              </div>
-            </div>
-          ))}
+        <div className="image-container w-full overflow-hidden z-10 -mt-12 flex justify-center relative">
+          <img src="/images/home/samurai.png" alt="Image" className="w-auto h-[27rem] lg:h-[28rem] object-cover relative z-10" />
+        </div>
+        <div className="z-30 relative -mt-10 mx-auto w-fit">
+           <p className="font-druk-wide-bold text-[3.4rem] flex gap-4">
+              <span className="text-[#00FFDD]">IS</span>
+              <span className="text-[#EEFF00]">OVER</span>
+            </p>   
+        </div>
+        <div className="date-and-timer flex flex-col gap-5 justify-center py-2">
+          <h2 className="dates font-bebas-neue text-3xl text-center text-white">MARCH 6, 7, 8</h2>
+          <div className="timer">
+            <CountdownTimer />
+          </div>
         </div>
 
+      </div>
 
 
+
+      <div className="w-full  lg:w-1/2 mx-auto">
         {/* past society events
         <div className="py-5">
           <div className="px-8">
-            <h1 className=" heading text-3xl font-dm-sans text-center text-white p-2 rounded-3xl border border-[#ff006a]" >
+            <h1 className=" heading text-2xl font-dm-sans text-center text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
               Reviews by attendees
             </h1>
           </div>
@@ -86,24 +68,22 @@ export default function Home() {
             <SmoothCarousel card={}/>
           </div>
         </div> */}
-
-
-
         {/* reviews by attendess */}
-        <div className="py-5">
+        <div className="py-5 ">
           <div className="px-8">
-            <h1 className=" heading text-3xl font-dm-sans text-center text-white p-2 rounded-3xl border border-[#ff006a]" >
-              Reviews by attendees
-            </h1>
+          <h1 className=" heading text-2xl font-dm-sans text-center   text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
+            Reviews by attendees
+          </h1>
           </div>
+
           <div className="relative overflow-hidden w-full mt-10">
-            <ReviewsByAttendees/>
+            <ReviewsByAttendees />
           </div>
         </div>
 
         {/* FAQ Section */}
-        <div className="px-8 pt-5 pb-14">
-          <h1 className="heading text-3xl font-dm-sans text-center text-white p-2 rounded-3xl border border-[#ff006a]" >
+        <div className="py-5 px-8">
+          <h1 className="heading text-2xl font-dm-sans  text-center text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
             FAQ
           </h1>
           <div className="mt-10 faq-wrapper flex flex-col gap-6 items-center px-2 ">
@@ -112,8 +92,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-
       </div>
     </div>
+
   );
 }
