@@ -18,7 +18,7 @@ const FAQItem = ({ question, answer }) => {
                 </span>
             </button>
             <div
-                className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+                className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[100vh] opacity-100" : "max-h-0 opacity-0"}`}
             >
                 <div className="mt-5 rounded-2xl border border-[#ff006a] px-6 py-4 bg-[#ff006a]/5">
                     <p className="text-gray-100 text-base font-dm-sans">{answer}</p>

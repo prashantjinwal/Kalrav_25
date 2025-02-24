@@ -3,37 +3,38 @@ import SmoothCarousel from '../common/SmoothCarousel';
 
 const events = [
   {
-    event_img: 'https://imgs.search.brave.com/nbD5DIjpckPxZAvUkAYX5yRPXXqr5UphKWrz3BudmZs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA4LzAyLzE5LzQy/LzM2MF9GXzgwMjE5/NDIzOF83cnhYSUc0/Y29wRm9STTlmNkY1/VXNRZkZmenlvNDBF/UC5qcGc',
-    event: 'This event was amazing! Had a great time.',
-    name: 'John Doe',
+
+    image: 'images/temp_review/img1.png',
+    name: 'The Western Dance Society',
+    desc: "1. Pasodoble - the western group dance competition 100+ teams participation, showcase of various western styles afro jazz whacking locking house hiphop ect.",
   },
   {
-    event_img: 'https://imgs.search.brave.com/f4wACFviVrs9JilEdNseYYxXsaa5MX7nq9Gbqb1kjVU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMy8w/Ni8wMy8xNi80OC9j/dW1iZXJsYW5kLXNs/aWRlci04MDM4MDU0/XzY0MC5qcGc',
-    event: 'A wonderful experience, will definitely come again.',
-    name: 'Jane Smith',
+
+    image: 'images/temp_review/img2.png',
+    name: 'Enactus DDUC',
+    desc: 'Our stalls are a collaborative effort between various Enactus teams from different colleges, united by a shared mission to promote sustainability and empower marginalized communities. We sell eco-friendly and handcrafted products, providing a platform for artisans and small entrepreneurs to gain financial independence. Every purchase directly supports social and environmental causes, making a real difference in the lives of those in need while encouraging responsible consumption.',
   },
   {
-    event_img: 'https://imgs.search.brave.com/MHblyjBjvEvt3h6WYPIH_w_aJ8NKfqxXj3IWqwC9Tmw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c21hcnRzbGlkZXIz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/c2xpZGVyL2NhY2hl/L2EzOWU4OTExMGI5/MDAxMDlkMGNjZTM1/Y2YxZWZmMGE4L2lt/YWdlc2xpZGVyLWJh/Y2tncm91bmQzLmpw/Zw',
-    event: 'Loved every moment of it!',
-    name: 'Sam Wilson',
+
+    image: 'images/temp_review/img3.png',
+    name: 'Polaroid',
+    desc: 'Spectrum, hosted by Polaroid, is a key event of Kalrav, featuring a photography exhibition and several related competitions. It showcases the best works of Polaroid members while inviting students from various colleges to demonstrate their creativity in visual storytelling. Spectrum provides a platform for emerging photographers and filmmakers to push creative boundaries and engage with a wider audience.',
+  },
+  {
+    image: 'images/temp_review/img4.png',
+    name: 'Kavi Sammelan',
+    desc: 'दीन दयाल उपाध्याय कॉलेज के साहित्यिक संघ क़लमकार द्वारा आयोजित कवि सम्मेलन - २४ अत्यंत सफल रहा, जिसमें छात्रों की उल्लेखनीय भागीदारी देखने को मिली। इस कार्यक्रम में प्रतिष्ठित कवियों-डॉ. अशोक बत्रा जी, सुदीप भोला जी, अर्जुन सिसोदिया जी, प्रियंका राय जी, और रोहित चौधरी जी की उपस्थिति ने समां बांध दिया। उनके काव्य ज्ञान और सृजनात्मकता से श्रोतागण अभिभूत हो गए। कवि सम्मेलन के उस महत्वपूर्ण प्रसंग की संक्षिप्त झलक आपके समक्ष प्रस्तुत है।',
   },
 ];
 
 const Card = ({ event }) => {
   return (
-    <div
-      className={`w-[18rem] h-[12rem] transition-all duration-500 overflow-hidden relative flex flex-col items-center justify-center`}
-      style={{
-        backgroundImage: `url(${event.event_img})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        borderRadius: '1.7rem',
-      }}
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-      <div className="relative z-10 text-center px-4">
-        <p className="text-white font-dm-sans">{event.event}</p>
-        <p className="text-white font-dm-sans font-semibold mt-5">- {event.name}</p>
+    <div className='rounded-3xl bg-white bg-opacity-20 backdrop:blur-lg backdrop:bg-black overflow-hidden' >
+      <div className="event-image"><img src={event.image} className='aspect-auto w-full object-cover rounded-b-3xl ' alt="" /></div>
+      <div className="px-5 pb-4 ">
+        <h2 className="text-white font-dm-sans text-center p-2" translate='no'>{event.name}</h2>
+        <hr  className='py-1'/>
+        <p className="text-white font-dm-sans text-xs  " translate='no'>{event.desc}</p>
       </div>
     </div>
   );

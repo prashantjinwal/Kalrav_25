@@ -41,10 +41,10 @@ const Card = ({ review }) => {
         borderRadius: '1.8rem',
       }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-      <div className="relative z-10 text-center px-8 py-5">
+      <div className="absolute  inset-0  bg-black bg-opacity-40"></div>
+      <div className="relative z-10 text-center p-6">
         <p className="text-white text-sm font-dm-sans">{review.review}</p>
-        <p className="text-white font-dm-sans font-semibold mt-5">- {review.name}</p>
+        <p className="text-white font-dm-sans font-semibold mt-2">- {review.name}</p>
       </div>
     </div>
   );
@@ -56,6 +56,7 @@ export default function ReviewsByAttendees() {
       <SmoothCarousel
         cards={reviews.map((review, index) => () => <Card key={index} review={review} />)}
       />
+      
     </div>
   );
 }
