@@ -42,14 +42,12 @@ export default function Header() {
 
     return (
         <header className="header ">
-            {/* <div
-                className={`header p-4 fixed top-0 left-0 w-full z-40 transform transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
+            <div
+                className={`header px-4 py-5 fixed top-0 left-0 w-full z-40 transform transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
                     }`}
-            > */}
-            <div className={` px-4 py-5 fixed top-0 left-0 w-full z-40 transform transition-transform duration-300 `}
             >
                 {/* Header background and logo */}
-                <div  className="bg-transparent  px-4 backdrop-blur-md  h-[3.25rem] overflow-hidden  flex items-center justify-between lg:justify-around border border-[#FF00A6] rounded-3xl ">
+                <div className="bg-transparent  px-4 backdrop-blur-md  h-[3.25rem] overflow-hidden  flex items-center justify-between lg:justify-around border border-[#FF00A6] rounded-3xl ">
                     <div className="logo cursor-pointer  " onClick={handleLogoClick}>
                         <img src="/images/kalrav-logo.png" alt="Logo" className="h-[6.5rem]  w-auto object-cover" />
                     </div>
@@ -62,21 +60,21 @@ export default function Header() {
                     </button>
                 </div>
 
-                {/* Sidebar component */}
-                <div
-                    className={`fixed  top-20 h-fit right-0 w-[70%] sm:w-1/2 lg:w-[30%] transform transition-all duration-300 z-[100] ${showSidebar ? 'translate-x-0' : 'translate-x-full'
-                        }`}
-                >
-                    <SideBar hide={closeSidebar} />
-                </div>
-                {/* Overlay when sidebar is open */}
-                {showSidebar && (
-                    <div
-                        className="fixed inset-0 w-screen h-screen bg-gray-700 opacity-20 z-50"
-                        onClick={closeSidebar}
-                    ></div>
-                )}
             </div>
+            {/* Sidebar component */}
+            <div
+                className={`fixed top-1/2 -translate-y-1/2 h-[80vh] right-0 w-[70%] sm:w-1/2 lg:w-[30%] transform transition-all duration-300 z-[100] ${showSidebar ? 'translate-x-0' : 'translate-x-full'
+                    }`}
+            >
+                <SideBar hide={closeSidebar} />
+            </div>
+            {/* Overlay when sidebar is open */}
+            {showSidebar && (
+                <div
+                    className="fixed inset-0 w-screen h-screen bg-gray-700 opacity-20 z-50"
+                    onClick={closeSidebar}
+                ></div>
+            )}
         </header>
     );
 }

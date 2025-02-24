@@ -15,6 +15,7 @@ module.exports = {
         'bebas-neue': ['Bebas Neue'],
         'druk-wide-bold': ['Druk Wide Bold'],
         'pessanger-sans-bold': ['Passenger Sans'],
+        'nikkyou-sans': ['Nikkyou Sans'],
       },
       keyframes: {
         'infinite-scroll': {
