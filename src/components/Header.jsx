@@ -63,9 +63,13 @@ export default function Header() {
             </div>
             {/* Sidebar component */}
             <div
-                className={`fixed top-1/2 -translate-y-1/2 h-[80vh] right-0 w-[70%] sm:w-1/2 lg:w-[30%] transform transition-all duration-300 z-[100] ${showSidebar ? 'translate-x-0' : 'translate-x-full'
+                className={`fixed top-1/2 -translate-y-1/2 h-[80vh] right-0 w-[65%] sm:w-1/2 lg:w-[30%] transform transition-all duration-300 z-[100] ${showSidebar ? 'translate-x-0' : 'translate-x-full'
                     }`}
             >
+            {/* <div
+                className={`fixed bottom-0  h-[81vh] right-0 w-[65%] sm:w-1/2 lg:w-[30%] transform transition-all duration-300 z-[100] ${showSidebar ? 'translate-x-0' : 'translate-x-full'
+                    }`}
+            > */}
                 <SideBar hide={closeSidebar} />
             </div>
             {/* Overlay when sidebar is open */}

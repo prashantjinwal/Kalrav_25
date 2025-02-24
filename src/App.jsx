@@ -37,7 +37,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Itinerary" element={<Itinerary />} />
-            <Route path="/Sponsers" element={<Sponsers />} />
+            <Route path="/Sponsors" element={<Sponsers />} />
             <Route path="/Team" element={<Team />} />
             <Route path="/Competition" element={<Competition />} />
           </Routes>
