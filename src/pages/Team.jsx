@@ -1,81 +1,55 @@
-import { useState, useEffect } from "react";
-import Teams from "../../public/images/Team/teamData.js";
-import TeamComp from "../components/TeamComp";
+import React from 'react';
 
 export default function Team() {
-  const [loading, setLoading] = useState(true);
+    const teamMembers = [
+        { name: 'Member 1', image: '/images/TeamNew/sanket-pathak.png' },
+        { name: 'Member 2', image: '/images/TeamNew/yash-chandola.png' },
+        { name: 'Member 3', image: '/images/TeamNew/bhart-kaushik.png' },
+        { name: 'Member 4', image: '/images/TeamNew/member4.png' },
+        { name: 'Member 5', image: '/images/TeamNew/member5.png' },
+    ];
+    const teamHeads = [
+        { name: 'Member 1', image: '/images/TeamNew/sanket-pathak.png' },
+        { name: 'Member 2', image: '/images/TeamNew/yash-chandola.png' },
+        { name: 'Member 3', image: '/images/TeamNew/bhart-kaushik.png' },
+    ]
 
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 3000); 
-  }, []);
+    return (
+        <div className="pt-20 py-10 relative">
+            <div className="mt-2">
+                <div className="text-center">
+                    <h2 className="text-[#A2A2A2] text-[1.9rem] font-pessanger-sans-bold">THE</h2>
+                    <h1 className="-mt-3 text-[#EEFF00] font-druk-wide-bold text-[4.8rem]">TEAM</h1>
+                </div>
+                <div className="relative flex justify-center -mt-[5.3rem] px-5">
+                    <div className="-z-10 absolute inset-0 top-10 flex justify-center items-center px-4">
+                        <div className="w-full h-[12rem] bg-[#FF00A6] rounded-full filter blur-[4rem]"></div>
+                    </div>
+                    <img className="w-full z-10 h-auto object-cover" src="/images/TeamNew/hand-fan.png" alt="Hand Fan" />
+                </div>
+            </div>
+            <div className="mt-10 flex flex-col gap-10">
+                {teamMembers.map((member, index) => (
+                    <div
+                        key={index}
+                        className={`relative flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center ${index % 2 === 0 ? 'ml-0' : 'mr-0'}`}
+                    >
+                        <div className="relative w-[200px] h-[200px] overflow-hidden">
+                            <img className="w-full h-full object-cover" src={member.image} alt={member.name} />
+                            <div className="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2">
+                                {member.name}
+                            </div>
+                            <div className="absolute top-0 left-0 transform -rotate-90 origin-top-left bg-black bg-opacity-50 text-white p-2">
+                                {member.name}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
 
-  const SkeletonImage = () => (
-    <div className="w-40 h-40 rounded-full animate-pulse shadow-xl bg-gradient-to-br from-red-900 to-black bg-[length:200%_200%] animate-gradient"></div>
-  );
-
-  const SkeletonText = () => (
-    <div className="w-32 h-6 bg-gray-500 rounded-md animate-pulse mt-2"></div>
-  );
-
-  return (
-    <div className="pt-20 py-10 flex flex-col bg-gradient-to-r from-[#301F0E] to-[#FDA605] justify-center items-center">
-      {/* Core Cultural Council */}
-      <div className="bg-[url('/images/Group.png')] bg-cover w-[85%] lg:w-[50%] bg-no-repeat flex justify-center lg:justify-around">
-        <h3 className="text-black font-semibold text-3xl font-protest py-4">Core Cultural Council</h3>
-      </div>
-
-      <div className="my-3 flex flex-wrap justify-center gap-3 lg:gap-10 px-2">
-        {loading
-          ? Array(8).fill(0).map((_, index) => (
-              <div key={index} className="flex flex-col items-center ">
-                <SkeletonImage />
-                <SkeletonText />
-              </div>
-            ))
-          : Teams.core.map((item, index) => <TeamComp key={index} img={item.img} name={item.name} post={item.post} />)}
-      </div>
-
-      {/* Divider */}
-      <div className="px-4 py-12 w-[90%] lg:w-[30%] flex justify-center">
-        <img src="/images/divider2.png" alt="" loading="lazy" />
-      </div>
-
-      {/* Team Heads */}
-      <div className="bg-[url('/images/Group.png')] bg-cover w-[85%] lg:w-[50%] bg-no-repeat flex justify-center lg:justify-around">
-        <h3 className="text-black font-semibold text-3xl font-protest py-4">Team Heads</h3>
-      </div>
-
-      <div className="my-3 flex flex-wrap justify-center gap-3 lg:gap-10 px-2">
-        {loading
-          ? Array(12).fill(0).map((_, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <SkeletonImage />
-                <SkeletonText />
-              </div>
-            ))
-          : Teams.Heads.map((item, index) => <TeamComp key={index} img={item.img} name={item.name} post={item.post} />)}
-      </div>
-
-      {/* Divider */}
-      <div className="px-4 py-14 w-[90%] lg:w-[30%] flex justify-center">
-        <img src="/images/divider2.png" alt="" loading="lazy" />
-      </div>
-
-      {/* Students Council */}
-      <div className="bg-[url('/images/Group.png')] bg-cover w-[85%] lg:w-[50%] bg-no-repeat flex justify-center lg:justify-around">
-        <h3 className="text-black font-semibold text-3xl font-protest py-4">Student Council</h3>
-      </div>
-
-      <div className="my-3 flex flex-wrap justify-center gap-3 lg:gap-10 px-2">
-        {loading
-          ? Array(2).fill(0).map((_, index) => (
-              <div key={index} className="flex flex-col items-center ">
-                <SkeletonImage />
-                <SkeletonText />
-              </div>
-            ))
-          : Teams.Suc.map((item, index) => <TeamComp key={index} img={item.img} name={item.name} post={item.post} />)}
-      </div>
-    </div>
-  );
+            <div className="team-heads">
+                
+            </div>
+        </div>
+    );
 }

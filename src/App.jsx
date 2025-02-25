@@ -9,6 +9,7 @@ import Competition from "./pages/competition"
 import ScreenCompatibilityPopup from "./components/ScreenCompatibilityPopup"
 import { useEffect, useState } from "react"
 import HomagePageLoader from "./components/Loader/HomagePageLoader"
+import TempTeam from "./pages/TempTeam"
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -38,7 +39,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Itinerary" element={<Itinerary />} />
             <Route path="/Sponsors" element={<Sponsers />} />
-            <Route path="/Team" element={<Team />} />
+          <Route path="/newteam" element={<Team/>} />  {/* working on new team page*/}
+            <Route path="/Team" element={<TempTeam/>} />
+
             <Route path="/Competition" element={<Competition />} />
           </Routes>
           <Footer />
