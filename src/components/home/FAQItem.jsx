@@ -11,7 +11,7 @@ const FAQItem = ({ question, answer }) => {
       <motion.button
         whileHover={{ scale: 1.05 }} // Add hover animation
         whileTap={{ scale: 0.95 }} // Add tap animation
-        className="relative text-center px-6 py-3 rounded-[1.6rem] border-2 border-[#ff006a] bg-transparent hover:bg-[#ff006a]/10 transition-all duration-300 w-full max-w-md"
+        className="relative text-center px-6 py-3 rounded-[1.6rem] border-2 border-[#D3A84C] bg-transparent hover:bg-[#ff006a]/10 transition-all duration-300 w-full max-w-md"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
@@ -36,7 +36,7 @@ const FAQItem = ({ question, answer }) => {
         transition={{ duration: 0.3, ease: "easeInOut" }} // Smooth transition
         className="w-full max-w-md"
       >
-        <div className="mt-5 rounded-2xl border-2 border-[#ff006a] px-6 py-4 bg-[#ff006a]/10">
+        <div className="mt-5 rounded-2xl border-2 border-[#D3A84C] px-6 py-4 bg-[#ff006a]/10">
           <p className="text-gray-100 text-base font-dm-sans leading-relaxed">
             {answer}
           </p>
