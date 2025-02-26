@@ -47,7 +47,7 @@ export default function Header() {
                     }`}
             >
                 {/* Header background and logo */}
-                <div className="bg-transparent  px-4 backdrop-blur-md  h-[3.25rem] overflow-hidden  flex items-center justify-between lg:justify-around border-[1px] border-[#FF00A6] rounded-3xl ">
+                <div className="bg-transparent  px-4 backdrop-blur-md  h-[3.25rem] overflow-hidden  flex items-center justify-between lg:justify-around border-[0.5px] border-[#FF00A6] rounded-3xl ">
                     <div className="logo cursor-pointer  " onClick={handleLogoClick}>
                         <img src="/images/kalrav-logo.png" alt="Logo" className="h-[6.5rem]  w-auto object-cover" />
                     </div>
