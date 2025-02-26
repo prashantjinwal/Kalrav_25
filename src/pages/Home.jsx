@@ -37,9 +37,11 @@ export default function Home() {
           <h1 className="text-[#BA91AB] text-3xl  font-pessanger-sans-bold font-bold text-left">THE</h1>
           <h1 className="font-druk-wide-bold text-[5rem] -mt-3 text-white   text-left ">WAIT</h1>
         </div>
+        <div className="-z-10 absolute inset-0  -top-20 flex justify-center items-center px-4">
+          <div className="w-full h-[24rem] bg-[#FF00A6] rounded-full filter blur-[4rem]"></div>
+        </div>
         <div className="image-container w-full overflow-hidden z-10 -mt-12 flex justify-center relative">
           <img src="/images/home/samurai.png" alt="Image" className="z-10 w-auto h-[27rem] lg:h-[28rem] object-cover relative " />
-    
         </div>
         <div className="z-30 relative -mt-10 mx-auto w-fit">
           <p className="font-druk-wide-bold text-[3.4rem] flex gap-4">
@@ -59,16 +61,16 @@ export default function Home() {
 
 
       <div className="w-full  lg:w-1/2 mx-auto">
-        {/* <div className="py-5">
+        <div className="py-5">
           <div className="px-8">
             <h1 className=" heading text-2xl font-dm-sans text-center text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
-            Past Society Events
+              Past Society Events
             </h1>
           </div>
           <div className="relative overflow-hidden w-full mt-10">
-            <PastSocietyEvents/>
+            <PastSocietyEvents />
           </div>
-        </div> */}
+        </div>
         {/* reviews by attendess */}
         <div className="py-5 ">
           <div className="px-8">
