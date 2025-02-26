@@ -34,7 +34,7 @@ export default function Home() {
 
       <div className="landing-page-container overflow-hidden relative mt-5">
         <div className="mx-auto  w-fit">
-          <h1 className="text-[#BA91AB] text-3xl  font-pessanger-sans-bold font-bold text-left">THE</h1>
+          <h1 className="text-[#BA91AB] text-4xl  font-pessanger-sans-bold font-bold text-left">THE</h1>
           <h1 className="font-druk-wide-bold text-[5rem] -mt-3 text-white   text-left ">WAIT</h1>
         </div>
         <div className="-z-10 absolute inset-0  -top-20 flex justify-center items-center px-4">
