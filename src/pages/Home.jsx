@@ -52,12 +52,12 @@ export default function Home() {
             <span className="text-[#EEFF00]">OVER</span>
           </p>
         </div>
-        <div className="date-and-timer flex flex-col gap-5 justify-center   py-2">
+        <div className="date-and-timer flex flex-col gap-5 justify-center  py-2">
         <motion.h2
       initial={{ opacity: 0, y: -20 }} // Initial animation state
       animate={{ opacity: 1, y: 0 }} // Animate to this state
       transition={{ duration: 1, delay: 0.5 }} // Animation duration and delay
-      className="dates font-sansita text-4xl text-center font-bold text-white"
+      className="dates font-sansita text-2xl sm:text-3xl md:text-4xl text-center font-bold text-white"
       style={{
         background: "linear-gradient(45deg, #D4AF37, #FFD700)",
         WebkitBackgroundClip: "text",
@@ -68,6 +68,7 @@ export default function Home() {
     >
       MARCH 6, 7, 8
     </motion.h2>
+
           <div className="timer flex justify-center relative">
             <CountdownTimer />
             <div className="absolute opacity-80  rotate-[10deg] -top-6 -z-10"><img src="/images/home/japan-map.png" className="h-28" alt="" /></div>
