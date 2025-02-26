@@ -105,7 +105,7 @@ export default function Home() {
         {/* reviews by attendess */}
         <div className="py-5 ">
           <div className="px-8">
-            <h1 className=" heading text-2xl font-dm-sans text-center   text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
+            <h1 className=" heading text-2xl font-dm-sans text-center text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
               Reviews by attendees
             </h1>
           </div>
