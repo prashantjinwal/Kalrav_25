@@ -53,7 +53,7 @@ const Card = ({ review }) => {
 export default function ReviewsByAttendees() {
   return (
     <div className="reviews-by-attendees">
-      <SmoothCarousel
+      <SmoothCarousel height='fit-content'
         cards={reviews.map((review, index) => () => <Card key={index} review={review} />)}
       />
       

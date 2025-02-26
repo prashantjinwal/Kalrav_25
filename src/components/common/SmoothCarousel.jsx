@@ -1,38 +1,40 @@
-import React, { useState } from 'react';
-import { SwiperSlide, Swiper } from 'swiper/react';
-import { Autoplay, EffectCoverflow, FreeMode, Navigation, Pagination } from 'swiper/modules';
+import React from "react";
+import { SwiperSlide, Swiper } from "swiper/react";
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 
-const SmoothCarousel = ({ cards }) => {
+const SmoothCarousel = ({ cards , height ="32rem" }) => {
   return (
     <Swiper
-    loop={true}
-      effect={'coverflow'}
+      loop={true}
+      effect={"coverflow"}
       grabCursor={true}
       centeredSlides={false}
       initialSlide={1}
       spaceBetween={20}
       slidesPerView={1}
-      modules={[EffectCoverflow,Pagination,Navigation]}
+      modules={[EffectCoverflow, Pagination, Navigation]}
       coverflowEffect={{
         rotate: 0,
         stretch: 0,
         depth: 100,
         modifier: 1,
-        slideShadows:false,
+        slideShadows: false,
       }}
-
       className="mySwiper"
-      >
-      {
-        cards.map((Card, index) => (
-          <SwiperSlide key={index} className="transition-transform duration-500 px-10">
+      style={{ height: height }} // Ensure Swiper has a fixed height
+    >
+      {cards.map((Card, index) => (
+        <SwiperSlide
+          key={index}
+          className="h-full flex items-center justify-center px-10"
+        >
+          <div className="flex items-center justify-center h-full w-full">
             <Card />
-
-          </SwiperSlide>
-        ))
-      }
-    </Swiper >
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
