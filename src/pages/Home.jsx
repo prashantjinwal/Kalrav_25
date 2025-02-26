@@ -32,27 +32,30 @@ export default function Home() {
   return (
     <div className="home-page-container pt-20 pb-10">
 
-      <div className="landing-page-container overflow-hidden relative mt-5">
+      <div className="landing-page-container relative mt-5">
         <div className="mx-auto  w-fit">
           <h1 className="text-[#BA91AB] text-3xl  font-pessanger-sans-bold font-bold text-left">THE</h1>
           <h1 className="font-druk-wide-bold text-[5rem] -mt-3 text-white   text-left ">WAIT</h1>
         </div>
         <div className="-z-10 absolute inset-0  -top-20 flex justify-center items-center px-4">
-          <div className="w-full h-[24rem] bg-[#FF00A6] rounded-full filter blur-[4rem]"></div>
+          <div className="w-full sm:w-[20rem] h-[24rem] bg-[#FF00A6] rounded-full filter blur-[5rem] animate-pulse"></div>
         </div>
         <div className="image-container w-full overflow-hidden z-10 -mt-12 flex justify-center relative">
           <img src="/images/home/samurai.png" alt="Image" className="z-10 w-auto h-[27rem] lg:h-[28rem] object-cover relative " />
         </div>
-        <div className="z-30 relative -mt-10 mx-auto w-fit">
+
+        <div className="z-30 relative -mt-10 mx-auto w-fit ">
+          {/* <div className="absolute w-full"><img src="/images/home/Ellipse22.png" alt=""  className="w-full"/></div> */}
           <p className="font-druk-wide-bold text-[3.4rem] flex gap-4">
             <span className="text-[#00FFDD]">IS</span>
             <span className="text-[#EEFF00]">OVER</span>
           </p>
         </div>
-        <div className="date-and-timer flex flex-col gap-5 justify-center py-2">
+        <div className="date-and-timer flex flex-col gap-5 justify-center   py-2">
           <h2 className="dates font-bebas-neue text-3xl text-center text-white">MARCH 6, 7, 8</h2>
-          <div className="timer">
+          <div className="timer flex justify-center relative">
             <CountdownTimer />
+            <div className="absolute opacity-80  rotate-[10deg] -top-6 -z-10"><img src="/images/home/japan-map.png" className="h-28" alt="" /></div>
           </div>
         </div>
 
@@ -67,7 +70,7 @@ export default function Home() {
               Past Society Events
             </h1>
           </div>
-          <div className="relative overflow-hidden w-full mt-10">
+          <div className="relative overflow-hidden w-full lg:w-1/2 mt-10 mx-auto">
             <PastSocietyEvents />
           </div>
         </div>
