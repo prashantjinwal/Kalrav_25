@@ -58,7 +58,7 @@ const CountdownTimer = () => {
         transition={{ duration: 0.5, delay: 0.2 }} // Animation duration and delay
         className="flex flex-col items-center mx-1 sm:mx-2 md:mx-3"
       >
-        <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white bg-white bg-opacity-10 rounded-lg p-2 sm:p-3 md:p-4 shadow-lg backdrop-blur-sm border border-white border-opacity-20">
+        <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white bg-transparent rounded-lg p-2 sm:p-3 md:p-4 shadow-lg border border-white border-opacity-20">
           {timeLeft[interval]}
         </div>
         <div className="text-sm sm:text-base md:text-lg text-white text-opacity-80 mt-1 sm:mt-2">
@@ -73,7 +73,7 @@ const CountdownTimer = () => {
       initial={{ opacity: 0, y: -20 }} // Fade in and slide down
       animate={{ opacity: 1, y: 0 }} // Animate to this state
       transition={{ duration: 1, delay: 0.5 }} // Animation duration and delay
-      className="mx-5 countdown-timer rounded-[1.2rem] py-4 sm:py-5 md:py-6 px-4 sm:px-6 md:px-8 bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 shadow-lg"
+      className="mx-5 countdown-timer rounded-[1.2rem] py-4 sm:py-5 md:py-6 px-4 sm:px-6 md:px-8 bg-transparent border border-white border-opacity-20 shadow-lg"
     >
       <div className="flex justify-center">
         {timerComponents.length ? (
@@ -85,7 +85,7 @@ const CountdownTimer = () => {
             transition={{ duration: 0.5 }}
             className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-opacity-80"
           >
-            Time's up!
+            Time&apos;s up!
           </motion.span>
         )}
       </div>
