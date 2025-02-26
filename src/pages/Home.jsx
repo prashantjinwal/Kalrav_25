@@ -1,5 +1,6 @@
 import faq from "../../public/data/FaqData.js";
 import Card from "../components/home/Card.jsx";
+import { motion } from "framer-motion";
 import FAQItem from "../components/home/FAQItem.jsx";
 import ReviewsByAttendees from "../components/home/ReviewsByAttendees.jsx";
 import CountdownTimer from "../components/home/CountdownTimer.jsx";
@@ -52,7 +53,21 @@ export default function Home() {
           </p>
         </div>
         <div className="date-and-timer flex flex-col gap-5 justify-center   py-2">
-          <h2 className="dates font-bebas-neue text-3xl text-center text-white">MARCH 6, 7, 8</h2>
+        <motion.h2
+      initial={{ opacity: 0, y: -20 }} // Initial animation state
+      animate={{ opacity: 1, y: 0 }} // Animate to this state
+      transition={{ duration: 1, delay: 0.5 }} // Animation duration and delay
+      className="dates font-sansita text-4xl text-center font-bold text-white"
+      style={{
+        background: "linear-gradient(45deg, #D4AF37, #FFD700)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
+        letterSpacing: "2px", // Add spacing for a calligraphy feel
+      }}
+    >
+      MARCH 6, 7, 8
+    </motion.h2>
           <div className="timer flex justify-center relative">
             <CountdownTimer />
             <div className="absolute opacity-80  rotate-[10deg] -top-6 -z-10"><img src="/images/home/japan-map.png" className="h-28" alt="" /></div>
