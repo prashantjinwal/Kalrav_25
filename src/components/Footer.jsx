@@ -4,7 +4,7 @@ export default function Footer() {
     const socialMediaLinks = [
         {
             imgUrl: '/images/icons/x.png',
-            link: 'https://www.x.com/DDUC',
+            link: '.',
             name: 'X'
         },
         {
@@ -19,7 +19,8 @@ export default function Footer() {
         },
         {
             imgUrl: '/images/icons/youtube.png',
-            link: 'https://www.youtube.com/DDUC',
+            link:
+'.',
             name: 'YouTube'
         },
         {
