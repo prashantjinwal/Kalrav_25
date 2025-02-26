@@ -22,7 +22,7 @@ const SmoothCarousel = ({ cards , height ="32rem" }) => {
         slideShadows: false,
       }}
       className="mySwiper"
-      style={{ height: height }} // Ensure Swiper has a fixed height
+      style={{height:height }} // Ensure Swiper has a fixed height
     >
       {cards.map((Card, index) => (
         <SwiperSlide
