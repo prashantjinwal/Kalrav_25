@@ -50,9 +50,13 @@ const Card = ({ event }) => {
 };
 
 export default function PastSocietyEvents() {
+
   return (
+    
     <div className="events">
+      
       <SmoothCarousel
+        // eslint-disable-next-line react/display-name
         cards={events.map((event, index) => () => <Card key={index} event={event} />)}
       />
     </div>

@@ -69,7 +69,7 @@ export default function Home() {
       initial={{ opacity: 0, y: -20 }} // Initial animation state
       animate={{ opacity: 1, y: 0 }} // Animate to this state
       transition={{ duration: 1, delay: 0.5 }} // Animation duration and delay
-      className="dates font-sansita text-2xl sm:text-3xl md:text-4xl text-center font-bold text-white"
+      className="dates font-sansita  text-2xl sm:text-3xl md:text-4xl text-center font-bold text-white"
       style={{
         background: "linear-gradient(45deg, #D4AF37, #FFD700)",
         WebkitBackgroundClip: "text",
@@ -94,7 +94,7 @@ export default function Home() {
       <div className="w-full  lg:w-1/2 mx-auto">
         <div className="py-5">
           <div className="px-8">
-            <h1 className=" heading text-2xl font-dm-sans text-center text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
+            <h1 className=" heading text-2xl font-dm-sans font-semibold  text-center text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
               Past Society Events
             </h1>
           </div>
@@ -105,7 +105,7 @@ export default function Home() {
         {/* reviews by attendess */}
         <div className="py-5 ">
           <div className="px-8">
-            <h1 className=" heading text-2xl font-dm-sans text-center text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
+            <h1 className=" heading text-2xl font-dm-sans font-semibold  text-center text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
               Reviews by attendees
             </h1>
           </div>
