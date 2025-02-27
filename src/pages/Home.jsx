@@ -40,7 +40,7 @@ export default function Home() {
         <div className="-z-10 absolute inset-0  -top-20 flex justify-center items-center px-4">
           <div className="w-full sm:w-[20rem] h-[24rem] bg-[#FF00A6] rounded-full filter blur-[5rem] animate-pulse"></div>
         </div>
-        <div className="image-container w-full overflow-hidden z-10 -mt-12 flex justify-center relative">
+        <div className="image-container w-full overflow-h idden z-10 -mt-12 flex justify-center relative">
           <img src="/images/home/samurai.png" alt="Image" className="z-10 w-auto h-[27rem] lg:h-[28rem] object-cover relative " />
         </div>
 

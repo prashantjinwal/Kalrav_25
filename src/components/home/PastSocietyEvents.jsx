@@ -52,7 +52,7 @@ const Card = ({ event }) => {
 export default function PastSocietyEvents() {
   return (
     <div className="events">
-      <SmoothCarousel
+      <SmoothCarousel 
         cards={events.map((event, index) => () => <Card key={index} event={event} />)}
       />
     </div>
