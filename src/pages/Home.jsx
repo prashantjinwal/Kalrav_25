@@ -36,50 +36,50 @@ export default function Home() {
 
       <div className="landing-page-container relative mt-5">
 
-       <div className="landing-page-container relative mt-5">
-      <div className="mx-auto w-fit">
-        <h1 className="text-[#BA91AB] text-4xl font-pessanger-sans-bold font-bold text-left">THE</h1>
-        <h1 className="font-druk-wide-bold text-[5rem] -mt-3 text-white text-left">WAIT</h1>
-      </div>
+        <div className="landing-page-container relative mt-5">
+          <div className="mx-auto w-fit">
+            <h1 className="text-[#BA91AB] text-4xl font-pessanger-sans-bold font-bold text-left">THE</h1>
+            <h1 className="font-druk-wide-bold text-[5rem] -mt-3 text-white text-left">WAIT</h1>
+          </div>
 
-      {/* Fire effect using Tailwind CSS */}
-      <div className="absolute inset-0 -top-20 flex justify-center items-center px-4">
-        <div className="w-[22rem] h-[24rem] bg-gradient-to-b from-[#FF4500] via-[#FF6347] to-transparent rounded-full blur-3xl opacity-80 animate-fire"></div>
-      </div>
+          {/* Fire effect using Tailwind CSS */}
+          <div className="absolute inset-0 -top-20 flex justify-center items-center px-4">
+            <div className="w-[22rem] h-[24rem] bg-gradient-to-b from-[#FF4500] via-[#FF6347] to-transparent rounded-full blur-3xl opacity-80 animate-fire"></div>
+          </div>
 
-      <div className="image-container w-full overflow-hidden z-10 -mt-12 flex justify-center relative">
-        <img
-          src="/images/home/samurai.png"
-          alt="Samurai"
-          className="z-10 w-auto h-[27rem] lg:h-[28rem] object-cover relative"
-        />
-      </div>
+          <div className="image-container w-full overflow-hidden z-10 -mt-12 flex justify-center relative">
+            <img
+              src="/images/home/samurai.png"
+              alt="Samurai"
+              className="z-10 w-auto h-[27rem] lg:h-[28rem] object-cover relative"
+            />
+          </div>
 
-      <div className="z-30 relative -mt-10 mx-auto w-fit">
-        <p className="font-druk-wide-bold text-[3.4rem] flex gap-4">
-          <span className="text-[#00FFDD]">IS</span>
-          <span className="text-[#EEFF00]">OVER</span>
-        </p>
-      </div>
-    </div>
+          <div className="z-30 relative -mt-10 mx-auto w-fit">
+            <p className="font-druk-wide-bold text-[3.4rem] flex gap-4">
+              <span className="text-[#00FFDD]">IS</span>
+              <span className="text-[#EEFF00]">OVER</span>
+            </p>
+          </div>
+        </div>
 
 
         <div className="date-and-timer flex flex-col gap-5 justify-center  py-4">
-        <motion.h2
-      initial={{ opacity: 0, y: -20 }} // Initial animation state
-      animate={{ opacity: 1, y: 0 }} // Animate to this state
-      transition={{ duration: 1, delay: 0.5 }} // Animation duration and delay
-      className="dates font-sansita  text-2xl sm:text-3xl md:text-4xl text-center font-bold text-white"
-      style={{
-        background: "linear-gradient(45deg, #D4AF37, #FFD700)",
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent",
-        textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
-        letterSpacing: "2px", // Add spacing for a calligraphy feel
-      }}
-    >
-      MARCH 6, 7, 8
-    </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }} // Initial animation state
+            animate={{ opacity: 1, y: 0 }} // Animate to this state
+            transition={{ duration: 1, delay: 0.5 }} // Animation duration and delay
+            className="dates font-sansita  text-2xl sm:text-3xl md:text-4xl text-center font-bold text-white"
+            style={{
+              background: "linear-gradient(45deg, #D4AF37, #FFD700)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
+              letterSpacing: "2px", // Add spacing for a calligraphy feel
+            }}
+          >
+            MARCH 6, 7, 8
+          </motion.h2>
 
           <div className="timer flex justify-center relative">
             <CountdownTimer />
