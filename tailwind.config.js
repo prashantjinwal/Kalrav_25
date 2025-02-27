@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line no-undef
 module.exports = {
   content: [
     "./index.html",
@@ -37,6 +38,16 @@ module.exports = {
           '0%': { transform: 'scale(2) translateY(4rem)' },
           '100%': { transform: 'scale(1) translateY(0)' }
         },
+        flicker: {
+          "0%": { opacity: "0.7", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.05)" },
+          "100%": { opacity: "0.7", transform: "scale(1)" },
+        },
+        fireWave: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        }
+        
 
       },
       animation: {
@@ -45,7 +56,11 @@ module.exports = {
         "scroll-right": 'scrollRight 20s linear infinite',
         "shrinkAndTranslateT": 'shrinkTranslate 2s ease-in-out',
         "animateToTop": 'animateToTop 1s ease-in-out forwards',
+       "fire": "flicker 1.5s infinite alternate",
+        "fire-wave": "fireWave 2s infinite ease-in-out",
+
       },
+      
       animationDelay: {
         '0s': '0s',
         '1s': '1s',
@@ -78,6 +93,7 @@ module.exports = {
           'animation-delay': '5s',
         },
       }
+      
       addUtilities(newUtilities, ['responsive', 'hover'])
     },
   ],
