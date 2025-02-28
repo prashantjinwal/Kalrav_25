@@ -5,6 +5,7 @@ import FAQItem from "../components/home/FAQItem.jsx";
 import ReviewsByAttendees from "../components/home/ReviewsByAttendees.jsx";
 import CountdownTimer from "../components/home/CountdownTimer.jsx";
 import PastSocietyEvents from "../components/home/PastSocietyEvents.jsx";
+import { DotIcon } from "lucide-react";
 
 export default function Home() {
 
@@ -18,13 +19,13 @@ export default function Home() {
       img_op: 80
     },
 
-    {
-      title: "ABOUT",
-      content:
-        "Kalrav Reincarnated\n\nWith the return of the legendary Kalrav, the atmosphere crackles with excitement, like a katana striking steel! This year’s festival embodies a spirit of togetherness and artistic excellence, much like the harmonious union of Yin and Yang. With over 20,000 students from 100+ colleges across the state eagerly awaiting its revival, Kalrav is set to be grander than ever.\n\nThis year, Kalrav blossoms like a vibrant Japanese matsuri. From foot-tapping global hits to soul-stirring vocals, the musical lineup promises to be larger than ever, echoing the energy of past headliners like Honey Singh, Jubin Nautiyal, Guru Randhawa, and Akhil Sachdeva.\n\nAs the lanterns glow softly against the night sky, Kalrav 2025 becomes more than just an event—it transforms into an experience, a realm where traditions meet innovation, and strangers become lifelong friends. As artists, musicians, and performers take the stage, the campus will bloom with talent, much like a field of sakura welcoming the arrival of spring.\n\nThis is not just a celebration; it is a passage into a new world. So step into this dimension of wonder, where Kalrav is not just a festival, but a journey into the extraordinary!",
-      content_bg_image: "/images/samurai/3.png",
-      img_op: 40
-    }
+    // {
+    //   title: "ABOUT",
+    //   content:
+    //     "Kalrav Reincarnated\n\nWith the return of the legendary Kalrav, the atmosphere crackles with excitement, like a katana striking steel! This year’s festival embodies a spirit of togetherness and artistic excellence, much like the harmonious union of Yin and Yang. With over 20,000 students from 100+ colleges across the state eagerly awaiting its revival, Kalrav is set to be grander than ever.\n\nThis year, Kalrav blossoms like a vibrant Japanese matsuri. From foot-tapping global hits to soul-stirring vocals, the musical lineup promises to be larger than ever, echoing the energy of past headliners like Honey Singh, Jubin Nautiyal, Guru Randhawa, and Akhil Sachdeva.\n\nAs the lanterns glow softly against the night sky, Kalrav 2025 becomes more than just an event—it transforms into an experience, a realm where traditions meet innovation, and strangers become lifelong friends. As artists, musicians, and performers take the stage, the campus will bloom with talent, much like a field of sakura welcoming the arrival of spring.\n\nThis is not just a celebration; it is a passage into a new world. So step into this dimension of wonder, where Kalrav is not just a festival, but a journey into the extraordinary!",
+    //   content_bg_image: "/images/samurai/3.png",
+    //   img_op: 40
+    // }
 
 
   ];
@@ -89,9 +90,68 @@ export default function Home() {
 
       </div>
 
+      {/* <div className="w-full lg:w-1/2 mx-auto py-6"> */}
+      {/* about us section */}
+      {/* <div className="about">
+          <div className="flex items-center  gap-4 ml-4">
+            <div className="w-2 h-2 bg-[#FF00A6] rounded-full -mt-1">
+            </div>
+            <h2 className="font-bebas-neue text-2xl text-white"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)", }}>
+              ABOUT US
+            </h2>
+          </div>
+          <div className="about-content py-5 overflow-hidden w-full">
+            <div className="">
+              <img src="images/home/aboutUs.png" alt="" className=" h-full object-cover" />
+            </div>
+          </div>
+          <div className="py-5 relative z-10">
+            <div className="absolute -left-[3rem]  -z-10  bottom-[60%]    "><img src="/images/home/cartoon1.png" className="h-[19rem] w-auto" alt="" /></div>
+            <div className="z-20">
+              <img src="/images/home/aboutUs2.png" alt="" className=" w-full h-full object-cover" />
+            </div>
+          </div>
+        </div> */}
+      {/* theme section */}
+      {/* <div className="theme">
+          <div className="flex items-center  gap-4 ml-4">
+            <div className="w-2 h-2 bg-[#00FFDD] rounded-full -mt-1">
+            </div>
+            <h2 className="font-bebas-neue text-2xl text-white"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)", }}>
+              THEME
+            </h2>
+          </div>
+          <div className="py-5 relative z-10 overflow-hidden">
+            <div className="absolute -right-[3rem]  -z-10  bottom-[55%]    "><img src="/images/home/cartoon2.png" className="h-[19rem] w-auto" alt="" /></div>
+            <div className="z-20">
+              <img src="/images/home/theme.png" alt="" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div> */}
 
 
-      <div className="w-full  lg:w-1/2 mx-auto">
+      <div className="w-full sm:w-9/12 md:w-[65%] lg:w-1/2 mx-auto">
+        {/* Cards Section */}
+        <div className="p-8 sm:mt-10 flex flex-col gap-6 mx-auto ">
+          {cardContents.map((card, index) => (
+            <div key={index}>
+              <Card
+                title={card.title}
+                content={card.content}
+                content_bg_image={card.content_bg_image}
+                img_op={card.img_op}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="px-12 py-2 flex justify-center">
+          <img src="/images/divider.png" alt="" loading="lazy" />
+        </div>
+
         <div className="py-5">
           <div className="px-8">
             <h1 className=" heading text-2xl font-dm-sans font-semibold  text-center text-white p-2 rounded-[1.3rem] border border-[#ff006a]" >
@@ -101,6 +161,9 @@ export default function Home() {
           <div className="relative overflow-hidden w-full lg:w-1/2 mt-10 mx-auto">
             <PastSocietyEvents />
           </div>
+        </div>
+        <div className="px-12 py-2 flex justify-center">
+          <img src="/images/divider.png" alt="" loading="lazy" />
         </div>
         {/* reviews by attendess */}
         <div className="py-5 ">
@@ -113,6 +176,9 @@ export default function Home() {
           <div className="relative overflow-hidden w-full mt-10">
             <ReviewsByAttendees />
           </div>
+        </div>
+        <div className="px-12 py-2 flex justify-center">
+          <img src="/images/divider.png" alt="" loading="lazy" />
         </div>
 
         {/* FAQ Section */}

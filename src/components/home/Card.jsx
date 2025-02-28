@@ -10,9 +10,9 @@ const Card = ({ title, content, content_bg_image, img_op }) => (
       />
 
       <div className="p-4 corner-dots">
-        <h1 className="text-center title font-protest text-[2.9rem] mb-2 font-medium ">{title}</h1>
+        <h1 className="text-center title font-protest font-medium text-[2.5rem] mb-2  ">{title}</h1>
         <div className="content w-full">
-          <p className="text-left text-sm font-noto pb-5">{content}</p>
+          <p className="text-left text-xs font-dm-sans pb-5">{content}</p>
         </div>
       </div>
     </div>
