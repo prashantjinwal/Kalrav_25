@@ -1,7 +1,7 @@
 const faq = [
     {
         id: 1,
-        question: "What Is Kalrav ?",
+        question: "What Is KALRAV ?",
         answer: "Annual Culture Fest of. Deen Dayal Upadhyaya College,University of Delhi. To celebrate a year of togetherness with diversity and essence of Indian tradition , KALRAV- The cultural fest of Deen Dayal Upadhaya College,University of Delhi is organised"
     },
     {
