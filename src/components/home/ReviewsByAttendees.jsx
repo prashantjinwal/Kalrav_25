@@ -33,15 +33,15 @@ const reviews = [
 const Card = ({ review }) => {
   return (
     <div
-      className={` aspect-[8/5] transition-all duration-500 overflow-hidden relative flex flex-col items-center justify-center`}
+      className={`rounded-[1.8rem] lg:h-[15rem] aspect-[8/5] transition-all duration-500 overflow-hidden relative flex flex-col items-center justify-center`}
       style={{
         backgroundImage: `url(${review.event_img})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        borderRadius: '1.8rem',
+       
       }}
     >
-      <div className="absolute  inset-0  bg-black bg-opacity-40"></div>
+      <div className="absolute  inset-0  bg-black bg-opacity-30"></div>
       <div className="relative z-10 text-center p-6">
         <p className="text-white text-sm font-dm-sans">{review.review}</p>
         <p className="text-white font-dm-sans font-semibold mt-2">- {review.name}</p>
