@@ -38,13 +38,13 @@ export default function SideBar({ hide }) {
             </div>
             <div className="flex flex-col justify-between h-full">
                 <div className="sidebar-center mt-10">
-                    <ul className="flex flex-col gap-5">
+                    <ul className="flex flex-col gap-5 ">
                         {navigationItems.map((item) => (
                             <li key={item.name} className=' ' onClick={hide}>
-                                <Link  to={item.link} className="block text-2xl  w-fit  hover:bg-gradient-to-br via-pink-600  from-red-600 from-[20%] via-[79%] to-black   text-left   px-2 py-1  text-white rounded-3xl  font-dm-sans">
+                                <Link  to={item.link} className="rounded-3xl block text-2xl  w-fit hover:bg-[url('/images/sidebar/linkBg.png')] bg-[length:120%_120%]  bg-center  text-left px-2 py-1 text-white  font-dm-sans">
                                     {item.name}
                                 </Link>
-                            </li>
+                                 </li>
                         ))}
                     </ul>
                     <hr className="border-white opacity-50  my-4 mx-3" />

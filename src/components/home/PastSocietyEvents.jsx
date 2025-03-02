@@ -41,8 +41,8 @@ const events = [
 // eslint-disable-next-line react/prop-types
 const Card = ({ event }) => {
   return (
-    <div className='rounded-xl bg-white bg-opacity-20 backdrop:blur-lg backdrop:bg-black overflow-hidden ' >
-      <div className="event-image rounded-xl w-full overflow-hidden"><img src={event.image} className='w-full aspect-[5/4] object-cover' alt="" /></div>
+    <div className='rounded-3xl lg:rounded-[1.8rem] bg-white bg-opacity-20 backdrop:blur-lg backdrop:bg-black overflow-hidden ' >
+      <div className="event-image rounded-3xl w-full overflow-hidden"><img src={event.image} className='w-full aspect-[5/4] object-cover' alt="" /></div>
       <div className="px-5 pb-4 ">
         <h2 className="text-white font-dm-sans text-center p-2" translate='no'>{event.name}</h2>
         <hr className='py-1' />

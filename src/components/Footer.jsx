@@ -20,7 +20,7 @@ export default function Footer() {
         {
             imgUrl: '/images/icons/youtube.png',
             link:
-'.',
+                '.',
             name: 'YouTube'
         },
         {
@@ -31,15 +31,17 @@ export default function Footer() {
     ]
 
     return (
-        <footer className='px-5 pt-10 pb-4 relative bg-gradient-to-t from-black/40 to-[#700409]/90  z-20'>
+        <footer className='px-5 pt-8 pb-4 relative bg-gradient-to-t from-black/40 to-[#700409]/90  z-20'>
             <div className="flex items-start justify-between lg:justify-around py-1">
                 <div className="address">
-                    <h1 className='name text-2xl font-protest text-[#D3A84C]'>DDUC</h1>
-                    <p className=" font-protest text-xs  text-white ">DEEN DAYAL UPADHYAYA COLLEGE. DELHI UNIVERSITY,</p>
-                    <p className=" font-protest text-xs text-white"> AZAD HIND FAUJ MARG, SECTOR-3, </p>
-                    <p className=" font-protest text-xs text-white">Dwarka, New Delhi, 110078, </p>
+                    {/* <h1 className='name text-[1.3rem]  font-semibold text-[#D3A84C] font-dm-sans '>DDUC</h1> */}
+                    <p className="  text-[0.7rem] text-white font-dm-sans  ">DEEN DAYAL UPADHYAYA COLLEGE   </p>
+                    <p className="  text-[0.7rem]  text-white font-dm-sans  ">DELHI UNIVERSITY ,  </p>
+                    <p className="  text-[0.7rem] text-white font-dm-sans "> AZAD HIND FAUJ MARG, SECTOR-3 </p>
+                    <p className="  text-[0.7rem] text-white font-dm-sans  ">Dwarka, New Delhi-110078 </p>
+                    
                 </div>
-                <div className="college-logo">
+                <div className="college-logo shrink-0">
                     <img src="/images/clgLogo.png" alt="logo" className='w-auto h-20 object-contain' />
                 </div>
             </div>
@@ -61,7 +63,7 @@ export default function Footer() {
                 <p className="protest-g">
                     Designed & Developed By <span className=" underline"> KALRAV IT TEAM </span>
                 </p>
-            </div>  
+            </div>
         </footer>
     )
 }

@@ -1,7 +1,7 @@
 const faq = [
     {
         id: 1,
-        question: "What Is Kalrav ?",
+        question: "What Is KALRAV ?",
         answer: "Annual Culture Fest of. Deen Dayal Upadhyaya College,University of Delhi. To celebrate a year of togetherness with diversity and essence of Indian tradition , KALRAV- The cultural fest of Deen Dayal Upadhaya College,University of Delhi is organised"
     },
     {
@@ -11,8 +11,8 @@ const faq = [
     },
     {
         id: 3,
-        question: "how can I Participate ?",
-        answer: "participate in Kalrav DDUC fest events, you can register through our website once registrations open. Details regarding participation criteria, registration deadlines, and event guidelines will be provided on the website."
+        question: "How can I Participate ?",
+        answer: "participate in KALRAV Deen Dayal Upadhyay College fest events, you can register through our website once registrations open. Details regarding participation criteria, registration deadlines, and event guidelines will be provided on the website."
     },
     {
         id: 4,
@@ -21,8 +21,8 @@ const faq = [
     },
     {
         id: 5,
-        question: "When and where will Kalrav 2025 take place?",
-        answer: "Kalrav DDUC 2025 is scheduled to take place SOON at DDUC campus."
+        question: "When and where will KALRAV 2025 take place?",
+        answer: "KALRAV Deen Dayal Upadhyay College 2025 is scheduled to take place SOON at Deen Dayal Upadhyay College campus."
     },
 ];
 
