@@ -1,8 +1,10 @@
 /* MUsing Google Fonts CDN */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 
 
@@ -121,3 +123,16 @@
     pointer-events: none; /* Ensure it doesn't interfere with clicks */
     z-index: -1; /* Place it behind the text */
   }
+
+
+
+.comptextheader {
+    font-family: 'Poppins', sans-serif;
+}
+.btn-style:active {
+  transform: scale(0.95);
+  transition: transform 0.2s;
+}
+.btn-style:hover {
+  cursor: pointer;
+}

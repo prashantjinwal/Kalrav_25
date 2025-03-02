@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+
 import SmoothCarousel from '../common/SmoothCarousel';
 
 const events = [
@@ -37,6 +38,7 @@ const events = [
   },
 ];
 
+// eslint-disable-next-line react/prop-types
 const Card = ({ event }) => {
   return (
     <div className='rounded-xl bg-white bg-opacity-20 backdrop:blur-lg backdrop:bg-black overflow-hidden ' >
