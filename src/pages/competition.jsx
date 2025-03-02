@@ -20,7 +20,7 @@ function Competition() {
 
   return (
     <>
-      <div className="flex justify-center mt-[5em]">
+      <div className="flex justify-center mt-[5em] pb-[1em]">
         <div className="bg-opacity-5 backdrop-filter bg-brown-100 backdrop-blur-md mx-[3em] w-[16em] lg:w-[20em] flex justify-center rounded-xl my-4 border border-solid border-white">
           <label className="px-4 text-xs py-3 text-white font-semibold" htmlFor="filteredDropdown">
             Filter By Category
