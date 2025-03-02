@@ -42,13 +42,7 @@ function Competition() {
 
       {selectedWord === 'All' && (
         <div className="mx-5">
-          {/* Polaroid */}
-          <h4 className="font-protest text-white bg-black inline-block mb-2 px-2 text-4xl mt-9 lg:ml-[3em] lg:text-6xl border border-white border-double">
-            Polaroid
-          </h4>
-          {Polaroid.map((post, index) => (
-            <Compscard key={index} src={post.src} link={post.link} />
-          ))}
+          
 
           {/* Kalamkaar */}
           <h4 className="font-protest text-white bg-black inline-block mb-2 px-2 text-4xl mt-9 lg:ml-[3em] lg:text-6xl border border-white border-double">
@@ -63,6 +57,14 @@ function Competition() {
             Raaga
           </h4>
           {Raaga.map((post, index) => (
+            <Compscard key={index} src={post.src} link={post.link} />
+          ))}
+
+          {/* Polaroid */}
+          <h4 className="font-protest text-white bg-black inline-block mb-2 px-2 text-4xl mt-9 lg:ml-[3em] lg:text-6xl border border-white border-double">
+            Polaroid
+          </h4>
+          {Polaroid.map((post, index) => (
             <Compscard key={index} src={post.src} link={post.link} />
           ))}
 
