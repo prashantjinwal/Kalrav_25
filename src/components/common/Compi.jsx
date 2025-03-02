@@ -7,7 +7,7 @@ function Compscard(props) {
     setTimeout(function () { setLoader(false); }, 2500);
 
     return (
-        <div className="flex justify-center mt-5">
+        <div className="flex justify-center ">
             <div className="p-6 bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-300 hover:shadow-3xl">
                 <div className="flex justify-center flex-wrap">
                     {Loader ? (
