@@ -32,17 +32,17 @@ export default function Footer() {
 
     return (
         <footer className='px-5 pt-8 pb-4 relative bg-gradient-to-t from-black/40 to-[#700409]/90  z-20'>
-            <div className="flex items-start justify-between lg:justify-around py-1">
-                <div className="address">
+            <div className="flex lg:px-28 items-start justify-between lg:justify-around py-1 ">
+                <div className="address font-dm-sans lg:text-[0.9rem]  text-[0.7rem] text-white">
                     {/* <h1 className='name text-[1.3rem]  font-semibold text-[#D3A84C] font-dm-sans '>DDUC</h1> */}
-                    <p className="  text-[0.7rem] text-white font-dm-sans  ">DEEN DAYAL UPADHYAYA COLLEGE   </p>
-                    <p className="  text-[0.7rem]  text-white font-dm-sans  ">DELHI UNIVERSITY ,  </p>
-                    <p className="  text-[0.7rem] text-white font-dm-sans "> AZAD HIND FAUJ MARG, SECTOR-3 </p>
-                    <p className="  text-[0.7rem] text-white font-dm-sans  ">Dwarka, New Delhi-110078 </p>
+                    <p className=" ">DEEN DAYAL UPADHYAYA COLLEGE   </p>
+                    <p className=" ">DELHI UNIVERSITY ,  </p>
+                    <p className=" "> AZAD HIND FAUJ MARG, SECTOR-3 </p>
+                    <p className=" ">Dwarka, New Delhi-110078 </p>
                     
                 </div>
                 <div className="college-logo shrink-0">
-                    <img src="/images/clgLogo.png" alt="logo" className='w-auto h-20 object-contain' />
+                    <img src="/images/clgLogo.png" alt="logo" className='w-auto h-20 lg:h-24 object-contain' />
                 </div>
             </div>
 
@@ -56,11 +56,11 @@ export default function Footer() {
             <div>
                 <img src="/images/footerBg.png" alt="..." className='absolute -z-10 bottom-0 left-1/2 -translate-x-1/2 w-auto h-32 object-cover' />
             </div>
-            <div className="copyright  text-gray-300 mx-auto  text-center text-[0.6rem] mt-8">
-                <p className="protest-g">
+            <div className="copyright font-dm-sans  text-gray-300 mx-auto  text-center text-[0.6rem] lg:text-sm mt-8">
+                <p className="">
                     2025 KALRAV. All Rights Reserved.
                 </p>
-                <p className="protest-g">
+                <p className="">
                     Designed & Developed By <span className=" underline"> KALRAV IT TEAM </span>
                 </p>
             </div>

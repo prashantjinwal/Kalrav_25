@@ -43,13 +43,13 @@ export default function Header() {
     return (
         <header className="header ">
             <div
-                className={`header px-4 py-5 fixed top-0 left-0 w-full z-40 transform transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
+                className={`header px-4 lg:px-10  py-5 fixed top-0 left-0 w-full z-40 transform transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
                     }`}
             >
                 {/* Header background and logo */}
-                <div className="bg-transparent  px-4 backdrop-blur-md  h-[3.25rem] overflow-hidden  flex items-center justify-between lg:justify-around border-[0.5px] border-[#FF00A6] rounded-3xl ">
+                <div className=" bg-transparent  px-4 backdrop-blur-md  h-[3.25rem] overflow-hidden  flex items-center justify-between lg:justify-around border-[0.5px] border-[#FF00A6] rounded-3xl ">
                     <div className="logo cursor-pointer  " onClick={handleLogoClick}>
-                        <img src="/images/kalrav-logo.png" alt="Logo" className="h-[6.5rem]  w-auto object-cover" />
+                        <img src="/images/kalrav-logo.png" alt="Logo" className="h-[6.5rem] lg:h-[8rem] w-auto object-cover" />
                     </div>
                     <button className="menu-btn" onClick={toggleSidebar}>
                         <div className="flex flex-col gap-1 hamburger-menu">
