@@ -43,12 +43,12 @@ const CountdownTimer = () => {
 
     const shortForm =
       interval === "days"
-        ? "days"
+        ? "Days"
         : interval === "hours"
-        ? "hrs"
+        ? "Hrs"
         : interval === "minutes"
-        ? "mins"
-        : "sec";
+        ? "Mins"
+        : "Sec";
 
     timerComponents.push(
       <motion.div

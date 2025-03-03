@@ -1,7 +1,8 @@
+import React, { useState, useRef, useEffect } from "react";
 import Polaroid from '../../public/data/competition';
 import { Kalamkaar, NSS, SPIC_MACAY, Raaga, Escapade, Enactus, wdc, FinS, nE, VSC, EOC, Ambedkar, Yavanika, Yuva } from '../../public/data/competition';
-import { useState } from "react";
 import Compscard from '../components/common/Compi.jsx';
+import { ArrowDropDown } from "@mui/icons-material";
 
 function Competition() {
   const allowedWords = [
@@ -12,10 +13,13 @@ function Competition() {
   ];
 
   const [selectedWord, setSelectedWord] = useState(allowedWords[0]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const buttonRef = useRef(null);
 
-  const handleSelectWord = (event) => {
-    const selectedValue = event.target.value;
-    setSelectedWord(selectedValue);
+  const handleSelectWord = (word) => {
+    setSelectedWord(word);
+    setIsDropdownOpen(false);
   };
 
   const getContentForWord = (word) => {
@@ -44,7 +48,7 @@ function Competition() {
     if (!content) return null;
     return (
       <div className="mx-5">
-        {content.title != 'Polaroid' && selectedWord === 'All' && (
+        {content.title !== 'Polaroid' && selectedWord === 'All' && (
           <div className="py-7 lg:py-10 flex justify-center">
             <img src="/images/divider.png" alt="" loading="lazy" />
           </div>
@@ -61,33 +65,52 @@ function Competition() {
     );
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target) && buttonRef.current &&
+        !buttonRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
+
   return (
     <>
       <div className="flex justify-center mt-[5em] pb-[1em]">
-        <div className="bg-opacity-5 backdrop-filter bg-brown-100 backdrop-blur-md mx-[3em] w-[16em] lg:w-[20em] flex justify-center rounded-xl my-4 border border-solid border-white">
-          <label className="px-4 text-xs py-3 text-white font-semibold" htmlFor="filteredDropdown">
+        <div className="bg-opacity-5 backdrop-filter bg-brown-100 backdrop-blur-md mx-[3em] w-[16em] lg:w-[20em] flex justify-center rounded-xl my-4 border border-solid border-white relative z-50">
+          <label className="px-4 text-xs py-3  font-dm-sans text-white font-semibold" htmlFor="filteredDropdown">
             Filter By Category
           </label>
-          <select
-            className="selectBtn bg-gradient-to-r from-[#b06c12] via-[#ca8122] to-[#ffd60a] w-full rounded-xl border border-solid border-black px-3 font-semibold"
-            id="filteredDropdown"
-            onChange={handleSelectWord}
-            value={selectedWord}
-          >
-            {allowedWords.map((word, index) => (
-              <option key={index} value={word}>
-                {word}
-              </option>
-            ))}
-          </select>
+
+          <div ref={buttonRef} className="selectBtn bg-gradient-to-r from-[#b06c12] via-[#ca8122] to-[#ffd60a] w-full rounded-xl border border-solid border-black px-3 font-semibold text-white relative flex items-center justify-between  cursor-pointer " onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+            {selectedWord}
+            <ArrowDropDown fontSize="large" className={`transition-transform duration-300 ${isDropdownOpen ? 'transform rotate-180' : ''}`} />
+          </div>
+          {isDropdownOpen && (
+            <div ref={dropdownRef} className="absolute  top-full left-0 w-full bg-black text-white rounded-xl mt-1 ">
+              {allowedWords.map((word, index) => (
+                <div key={index} className="px-4 py-2 hover:bg-gray-700 cursor-pointer font-dm-sans" onClick={() => handleSelectWord(word)}>
+                  {word}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
       {selectedWord === 'All' ? (
-        <div className="mx-5 pb-10 ">
-          {allowedWords.slice(1).map((word) => {
+        <div className="mx-5 pb-10">
+          {allowedWords.slice(1).map((word, index) => {
             const content = getContentForWord(word);
-            return content && renderContent(content);
+            return content &&
+              <div key={index} className="">
+                {renderContent(content)}
+              </div>
           })}
         </div>
       ) : (

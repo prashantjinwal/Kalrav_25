@@ -3,22 +3,21 @@ import { useState } from "react";
 
 function Compscard(props) {
     const [Loader, setLoader] = useState(true);
-
-    setTimeout(function () { setLoader(false); }, 2500);
-
     return (
         <div className="flex justify-center ">
             <div className="p-6 bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-300 hover:shadow-3xl">
                 <div className="flex justify-center flex-wrap">
-                    {Loader ? (
+                    {Loader && (
                         <div className="Competiton-poster-loder rounded-2xl lg:w-[24em] lg:h-[22em] w-[14em] h-[14em] bg-gradient-to-r from-[#3d405b] to-[#e07a5f] animate-pulse"></div>
-                    ) : (
-                        <img
-                            className="lg:w-[24em] w-[14em] rounded-2xl border-2 border-white/30 hover:border-white/50 transition-all duration-300 shadow-md"
-                            src={props.src}
-                            alt="#"
-                        />
                     )}
+
+                    <img
+                        className={`${Loader && 'hidden'} lg:w-[24em] w-[14em] rounded-2xl border-2 border-white/30 hover:border-white/50 transition-all duration-300 shadow-md`}
+                        src={props.src}
+                        onLoad={() => setLoader(false)}
+                        alt="#"
+                    />
+
                 </div>
                 <div className="flex justify-center mt-6">
                     <a href={props.link}>
