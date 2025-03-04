@@ -1,28 +1,90 @@
+import React, { useState, useRef, useEffect } from "react";
 import Polaroid from '../../public/data/competition';
-import { Rhapsody ,Kalamkaar, NSS, SPIC_MACAY, Raaga, Escapade, Enactus, wdc, FinS, nE, VSC, EOC, Ambedkar, Yavanika, Yuva } from '../../public/data/competition';
+import { Kalamkaar, NSS, SPIC_MACAY, Raaga, Escapade, Enactus, wdc, FinS, nE, VSC, EOC, Ambedkar, Yavanika, Yuva } from '../../public/data/competition';
 import { useState } from "react";
 import Compscard from '../components/common/Compi.jsx';
+import { ArrowDropDown } from "@mui/icons-material";
 
 function Competition() {
   const allowedWords = [
-    "All", "Polaroid", "Kalamkaar", "Raaga", "Rhapsody" 
+    "All", "Polaroid", "Kalamkaar", "Raaga", 
     "Enactus", "FinS", "Womens Development Cell", "North-east cell", 
     "Vivekananda study circle", "Yuva", "Yavanika", "Equal Opportunity Cell", 
     "NSS", "SPIC MACAY", "Ambedkar Study Circle", "Escapade"
   ];
 
   const [selectedWord, setSelectedWord] = useState(allowedWords[0]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const buttonRef = useRef(null);
 
-  const handleSelectWord = (event) => {
-    const selectedValue = event.target.value;
-    setSelectedWord(selectedValue);
+  const handleSelectWord = (word) => {
+    setSelectedWord(word);
+    setIsDropdownOpen(false);
   };
+
+  const getContentForWord = (word) => {
+    const contentMap = {
+      'Polaroid': { title: 'Polaroid', data: Polaroid },
+      'Kalamkaar': { title: 'Kalamkaar', data: Kalamkaar },
+      'Raaga': { title: 'Raaga', data: Raaga },
+      'Enactus': { title: 'Enactus', data: Enactus },
+      'FinS': { title: 'FinS', data: FinS },
+      'Womens Development Cell': { title: "Women's Development Cell", data: wdc, textSize: 'text-2xl lg:text-5xl' },
+      'North-east cell': { title: 'North-east Cell', data: nE, textSize: 'text-3xl lg:text-6xl' },
+      'Vivekananda study circle': { title: 'Vivekananda Study Circle', data: VSC, textSize: 'text-2xl lg:text-5xl' },
+      'Yuva': { title: 'Yuva', data: Yuva },
+      'Yavanika': { title: 'Yavanika', data: Yavanika },
+      'Equal Opportunity Cell': { title: 'Equal Opportunity Cell', data: EOC, textSize: 'text-2xl lg:text-5xl' },
+      'NSS': { title: 'NSS', data: NSS },
+      'SPIC MACAY': { title: 'SPIC MACAY', data: SPIC_MACAY },
+      'Ambedkar Study Circle': { title: 'Ambedkar Study Circle', data: Ambedkar },
+      'Escapade': { title: 'Escapade', data: Escapade }
+    };
+
+    return contentMap[word] || null;
+  };
+
+  const renderContent = (content) => {
+    if (!content) return null;
+    return (
+      <div className="mx-5">
+        {content.title !== 'Polaroid' && selectedWord === 'All' && (
+          <div className="py-7 lg:py-10 flex justify-center">
+            <img src="/images/divider.png" alt="" loading="lazy" />
+          </div>
+        )}
+        <h4 className={`font-protest text-white bg-black inline-block my-4 px-2 ${content.textSize || 'text-4xl lg:text-6xl'}  lg:ml-[3em] border border-white border-double`}>
+          {content.title}
+        </h4>
+        <div className="flex flex-col gap-5">
+          {content.data.map((post, index) => (
+            <Compscard key={index} src={post.src} link={post.link} />
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target) && buttonRef.current &&
+        !buttonRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
 
   return (
     <>
       <div className="flex justify-center mt-[5em] pb-[1em]">
-        <div className="bg-opacity-5 backdrop-filter bg-brown-100 backdrop-blur-md mx-[3em] w-[16em] lg:w-[20em] flex justify-center rounded-xl my-4 border border-solid border-white">
-          <label className="px-4 text-xs py-3 text-white font-semibold" htmlFor="filteredDropdown">
+        <div className="bg-opacity-5 backdrop-filter bg-brown-100 backdrop-blur-md mx-[3em] w-[16em] lg:w-[20em] flex justify-center rounded-xl my-4 border border-solid border-white relative z-50">
+          <label className="px-4 text-xs py-3  font-dm-sans text-white font-semibold" htmlFor="filteredDropdown">
             Filter By Category
           </label>
           <select
@@ -65,13 +127,6 @@ function Competition() {
             Polaroid
           </h4>
           {Polaroid.map((post, index) => (
-            <Compscard key={index} src={post.src} link={post.link} />
-          ))}
-          {/* Rhapsody */}
-          <h4 className="font-protest text-white bg-black inline-block mb-2 px-2 text-4xl mt-9 lg:ml-[3em] lg:text-6xl border border-white border-double">
-          Rhapsody
-          </h4>
-          {Rhapsody.map((post, index) => (
             <Compscard key={index} src={post.src} link={post.link} />
           ))}
 
@@ -184,38 +239,17 @@ function Competition() {
             <Compscard key={index} src={post.src} link={post.link} />
           ))}
         </div>
-      )}
+      </div>
 
-      {selectedWord === 'Kalamkaar' && (
-        <div className="mx-5">
-          <h4 className="font-protest text-white bg-black inline-block mb-2 px-2 text-4xl mt-9 lg:ml-[3em] lg:text-6xl border border-white border-double">
-            Kalamkaar
-          </h4>
-          {Kalamkaar.map((post, index) => (
-            <Compscard key={index} src={post.src} link={post.link} />
-          ))}
-        </div>
-      )}
-
-{selectedWord === 'Raaga' && (
-        <div className="mx-5">
-          <h4 className="font-protest text-white bg-black inline-block mb-2 px-2 text-4xl mt-9 lg:ml-[3em] lg:text-6xl border border-white border-double">
-            Raaga
-          </h4>
-          {Raaga.map((post, index) => (
-            <Compscard key={index} src={post.src} link={post.link} />
-          ))}
-        </div>
-      )}
-
-      {selectedWord === 'Enactus' && (
-        <div className="mx-5">
-          <h4 className="font-protest text-white bg-black inline-block mb-2 px-2 text-4xl mt-9 lg:ml-[3em] lg:text-6xl border border-white border-double">
-            Enactus
-          </h4>
-          {Enactus.map((post, index) => (
-            <Compscard key={index} src={post.src} link={post.link} />
-          ))}
+      {selectedWord === 'All' ? (
+        <div className="mx-5 pb-10">
+          {allowedWords.slice(1).map((word, index) => {
+            const content = getContentForWord(word);
+            return content &&
+              <div key={index} className="">
+                {renderContent(content)}
+              </div>
+          })}
         </div>
       )}
 
@@ -302,17 +336,6 @@ function Competition() {
             NSS
           </h4>
           {NSS.map((post, index) => (
-            <Compscard key={index} src={post.src} link={post.link} />
-          ))}
-        </div>
-      )}
-
-      {selectedWord === 'Rhapsody' && (
-        <div className="mx-5">
-          <h4 className="font-protest text-white bg-black inline-block mb-2 px-2 text-4xl mt-9 lg:ml-[3em] lg:text-6xl border border-white border-double">
-          Rhapsody
-          </h4>
-          {Rhapsody.map((post, index) => (
             <Compscard key={index} src={post.src} link={post.link} />
           ))}
         </div>
