@@ -31,24 +31,40 @@ const Polaroid = [
 const Rhapsody =[
     {
         title:"Rhapsody",
-        src:"images/comp/raaga1 (1).jpeg",
-        link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
+        src:"images/comp/rap (1).jpeg",
+        link:"#"
     },
     {
         title:"Rhapsody",
-        src:"images/comp/raaga1 (2).jpeg",
-        link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
+        src:"images/comp/rap (2).jpeg",
+        link:"#"
     },
     {
         title:"Rhapsody",
-        src:"images/comp/raaga1 (3).jpeg",
-        link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
+        src:"images/comp/rap (3).jpeg",
+        link:"#"
     },
     {
         title:"Rhapsody",
-        src:"/images/comp/raaga1 (4).jpeg",
-        link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
+        src:"images/comp/rap (4).jpeg",
+        link:"#"
     },
+    {
+        title:"Rhapsody",
+        src:"images/comp/rap (5).jpeg",
+        link:"#"
+    },
+    {
+        title:"Rhapsody",
+        src:"images/comp/rap (6).jpeg",
+        link:"#"
+    },
+    {
+        title:"Rhapsody",
+        src:"images/comp/rap (7).jpeg",
+        link:"#"
+    },
+    
     
 ]
 
