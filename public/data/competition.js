@@ -28,29 +28,29 @@ const Polaroid = [
     }
 ]
 
-// const Rhapsody =[
-//     {
-//         title:"Rhapsody",
-//         src:"images/comp/raaga1 (1).jpeg",
-//         link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
-//     },
-//     {
-//         title:"Rhapsody",
-//         src:"images/comp/raaga1 (2).jpeg",
-//         link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
-//     },
-//     {
-//         title:"Rhapsody",
-//         src:"images/comp/raaga1 (3).jpeg",
-//         link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
-//     },
-//     {
-//         title:"Rhapsody",
-//         src:"/images/comp/raaga1 (4).jpeg",
-//         link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
-//     },
+const Rhapsody =[
+    {
+        title:"Rhapsody",
+        src:"images/comp/raaga1 (1).jpeg",
+        link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
+    },
+    {
+        title:"Rhapsody",
+        src:"images/comp/raaga1 (2).jpeg",
+        link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
+    },
+    {
+        title:"Rhapsody",
+        src:"images/comp/raaga1 (3).jpeg",
+        link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
+    },
+    {
+        title:"Rhapsody",
+        src:"/images/comp/raaga1 (4).jpeg",
+        link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
+    },
     
-//]
+]
 
 
 const Kalamkaar  =[
@@ -268,4 +268,4 @@ const NSS = [
 
 
 export default Polaroid
-export { Kalamkaar ,NSS,SPIC_MACAY, Raaga , Escapade , Enactus , wdc , FinS , nE ,VSC ,EOC ,Ambedkar,Yavanika ,Yuva};
+export { Rhapsody, Kalamkaar ,NSS,SPIC_MACAY, Raaga , Escapade , Enactus , wdc , FinS , nE ,VSC ,EOC ,Ambedkar,Yavanika ,Yuva};

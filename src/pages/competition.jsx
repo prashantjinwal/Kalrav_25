@@ -1,11 +1,11 @@
 import Polaroid from '../../public/data/competition';
-import { Kalamkaar, NSS, SPIC_MACAY, Raaga, Escapade, Enactus, wdc, FinS, nE, VSC, EOC, Ambedkar, Yavanika, Yuva } from '../../public/data/competition';
+import { Rhapsody ,Kalamkaar, NSS, SPIC_MACAY, Raaga, Escapade, Enactus, wdc, FinS, nE, VSC, EOC, Ambedkar, Yavanika, Yuva } from '../../public/data/competition';
 import { useState } from "react";
 import Compscard from '../components/common/Compi.jsx';
 
 function Competition() {
   const allowedWords = [
-    "All", "Polaroid", "Kalamkaar", "Raaga", 
+    "All", "Polaroid", "Kalamkaar", "Raaga", "Rhapsody" 
     "Enactus", "FinS", "Womens Development Cell", "North-east cell", 
     "Vivekananda study circle", "Yuva", "Yavanika", "Equal Opportunity Cell", 
     "NSS", "SPIC MACAY", "Ambedkar Study Circle", "Escapade"
@@ -65,6 +65,13 @@ function Competition() {
             Polaroid
           </h4>
           {Polaroid.map((post, index) => (
+            <Compscard key={index} src={post.src} link={post.link} />
+          ))}
+          {/* Rhapsody */}
+          <h4 className="font-protest text-white bg-black inline-block mb-2 px-2 text-4xl mt-9 lg:ml-[3em] lg:text-6xl border border-white border-double">
+          Rhapsody
+          </h4>
+          {Rhapsody.map((post, index) => (
             <Compscard key={index} src={post.src} link={post.link} />
           ))}
 
@@ -295,6 +302,17 @@ function Competition() {
             NSS
           </h4>
           {NSS.map((post, index) => (
+            <Compscard key={index} src={post.src} link={post.link} />
+          ))}
+        </div>
+      )}
+
+      {selectedWord === 'Rhapsody' && (
+        <div className="mx-5">
+          <h4 className="font-protest text-white bg-black inline-block mb-2 px-2 text-4xl mt-9 lg:ml-[3em] lg:text-6xl border border-white border-double">
+          Rhapsody
+          </h4>
+          {Rhapsody.map((post, index) => (
             <Compscard key={index} src={post.src} link={post.link} />
           ))}
         </div>
