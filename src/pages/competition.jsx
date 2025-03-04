@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import Polaroid from '../../public/data/competition';
-import { Kalamkaar, NSS, SPIC_MACAY, Raaga, Escapade, Enactus, wdc, FinS, nE, VSC, EOC, Ambedkar, Yavanika, Yuva } from '../../public/data/competition';
+import { Rhapsody ,Kalamkaar, NSS, SPIC_MACAY, Raaga, Escapade, Enactus, wdc, FinS, nE, VSC, EOC, Ambedkar, Yavanika, Yuva } from '../../public/data/competition';
 import { useState } from "react";
 import Compscard from '../components/common/Compi.jsx';
 import { ArrowDropDown } from "@mui/icons-material";
 
 function Competition() {
   const allowedWords = [
-    "All", "Polaroid", "Kalamkaar", "Raaga", 
+    "All", "Polaroid", "Kalamkaar", "Raaga", "Rhapsody" ,
     "Enactus", "FinS", "Womens Development Cell", "North-east cell", 
     "Vivekananda study circle", "Yuva", "Yavanika", "Equal Opportunity Cell", 
     "NSS", "SPIC MACAY", "Ambedkar Study Circle", "Escapade"
@@ -39,7 +39,8 @@ function Competition() {
       'NSS': { title: 'NSS', data: NSS },
       'SPIC MACAY': { title: 'SPIC MACAY', data: SPIC_MACAY },
       'Ambedkar Study Circle': { title: 'Ambedkar Study Circle', data: Ambedkar },
-      'Escapade': { title: 'Escapade', data: Escapade }
+      'Escapade': { title: 'Escapade', data: Escapade },
+      'Rhapsody': { title: 'Rhapsody', data: Rhapsody }
     };
 
     return contentMap[word] || null;
@@ -127,6 +128,14 @@ function Competition() {
             Polaroid
           </h4>
           {Polaroid.map((post, index) => (
+            <Compscard key={index} src={post.src} link={post.link} />
+          ))}
+
+          {/* Rhapsody */}
+          <h4 className="font-protest text-white bg-black inline-block mb-2 px-2 text-4xl mt-9 lg:ml-[3em] lg:text-6xl border border-white border-double">
+          Rhapsody
+          </h4>
+          {Rhapsody.map((post, index) => (
             <Compscard key={index} src={post.src} link={post.link} />
           ))}
 
@@ -239,19 +248,16 @@ function Competition() {
             <Compscard key={index} src={post.src} link={post.link} />
           ))}
         </div>
-      </div>
-
-      {selectedWord === 'All' ? (
-        <div className="mx-5 pb-10">
-          {allowedWords.slice(1).map((word, index) => {
-            const content = getContentForWord(word);
-            return content &&
-              <div key={index} className="">
-                {renderContent(content)}
-              </div>
-          })}
-        </div>
       )}
+
+{allowedWords.slice(1).map((word) => {
+  const content = getContentForWord(word);
+  return content && (
+    <div key={word} className="">
+      {renderContent(content)}
+    </div>
+  );
+})}
 
       {selectedWord === 'FinS' && (
         <div className="mx-5">
@@ -369,6 +375,16 @@ function Competition() {
           Escapade
           </h4>
           {Escapade.map((post, index) => (
+            <Compscard key={index} src={post.src} link={post.link} />
+          ))}
+        </div>
+
+      {selectedWord === 'Rhapsody' && (
+        <div className="mx-5">
+          <h4 className="font-protest text-white bg-black inline-block mb-2 px-2 text-4xl mt-9 lg:ml-[3em] lg:text-6xl border border-white border-double">
+          Rhapsody
+          </h4>
+          {Rhapsody.map((post, index) => (
             <Compscard key={index} src={post.src} link={post.link} />
           ))}
         </div>
