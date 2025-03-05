@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import Polaroid from '../../public/data/competition';
+import Polaroid, { Rhapsody } from '../../public/data/competition';
 import { Kalamkaar, NSS, SPIC_MACAY, Raaga, Escapade, Enactus, wdc, FinS, nE, VSC, EOC, Ambedkar, Yavanika, Yuva } from '../../public/data/competition';
 import Compscard from '../components/common/Compi.jsx';
 import { ArrowDropDown } from "@mui/icons-material";

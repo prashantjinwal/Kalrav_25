@@ -4,8 +4,7 @@ const VSC  = [
         src:"images/comp/vsc1.jpeg",
         link:"https://www.instagram.com/vsc.dduc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
     },
-    
-      
+          
 ]
 
 
@@ -31,40 +30,24 @@ const Polaroid = [
 const Rhapsody =[
     {
         title:"Rhapsody",
-        src:"images/comp/rap (1).jpeg",
-        link:"#"
+        src:"images/comp/raaga1 (1).jpeg",
+        link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
     },
     {
         title:"Rhapsody",
-        src:"images/comp/rap (2).jpeg",
-        link:"#"
+        src:"images/comp/raaga1 (2).jpeg",
+        link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
     },
     {
         title:"Rhapsody",
-        src:"images/comp/rap (3).jpeg",
-        link:"#"
+        src:"images/comp/raaga1 (3).jpeg",
+        link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
     },
     {
         title:"Rhapsody",
-        src:"images/comp/rap (4).jpeg",
-        link:"#"
+        src:"/images/comp/raaga1 (4).jpeg",
+        link:"https://docs.google.com/forms/d/1xl868_IuT6w3tZvAi7O5bmk-bGh0qIPWlHgw-6lXzUo/edit?ts=67bef609"
     },
-    {
-        title:"Rhapsody",
-        src:"images/comp/rap (5).jpeg",
-        link:"#"
-    },
-    {
-        title:"Rhapsody",
-        src:"images/comp/rap (6).jpeg",
-        link:"#"
-    },
-    {
-        title:"Rhapsody",
-        src:"images/comp/rap (7).jpeg",
-        link:"#"
-    },
-    
     
 ]
 
@@ -284,4 +267,4 @@ const NSS = [
 
 
 export default Polaroid
-export { Rhapsody, Kalamkaar ,NSS,SPIC_MACAY, Raaga , Escapade , Enactus , wdc , FinS , nE ,VSC ,EOC ,Ambedkar,Yavanika ,Yuva};
+export { Kalamkaar ,NSS,SPIC_MACAY, Raaga , Escapade , Enactus , wdc , FinS , nE ,VSC ,EOC ,Ambedkar,Yavanika ,Yuva , Rhapsody};
